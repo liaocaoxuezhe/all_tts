@@ -1,0 +1,17 @@
+{
+  "scope": "只记录接口文档示例，不是全音库；其他 vcn 从账号控制台取得",
+  "voices": [
+    {
+      "id": "x4_xiaoyan",
+      "name": "x4_xiaoyan",
+      "language": null,
+      "model": "online-tts/v2",
+      "official_description": "官方参数表中的 vcn 示例；须在控制台开通",
+      "provider": "xfyun",
+      "source": "https://www.xfyun.cn/doc/tts/online_tts/API.html",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true
+    }
+  ]
+}

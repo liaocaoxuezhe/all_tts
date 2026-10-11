@@ -1,0 +1,4 @@
+interface:
+  display_name: "ALLTTS 音色推荐与配音"
+  short_description: "查询官方音色，结合创作场景推荐试听候选，用自配密钥生成配音音频"
+  default_prompt: "使用 $alltts 为这段中文短视频文稿推荐三个音色，并在我选定后生成配音。"

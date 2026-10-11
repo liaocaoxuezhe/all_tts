@@ -1,0 +1,178 @@
+[
+  {
+    "provider": "minimax",
+    "id": "Chinese (Mandarin)_Radio_Host",
+    "name": "电台男主播",
+    "scenes": [
+      "knowledge",
+      "short-video",
+      "story"
+    ],
+    "reason": "官方名为电台男主播；建议试听自然讲解和长段节奏。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://platform.minimax.cn/docs/faq/system-voice-id.md",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "volcengine",
+    "id": "zh_male_cixingjieshuonan_uranus_bigtts",
+    "name": "磁性解说男声 2.0",
+    "scenes": [
+      "knowledge",
+      "short-video",
+      "story"
+    ],
+    "reason": "官方名称为磁性解说男声2.0、场景为通用；深度内容适配是我们的推断。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://docs.volcengine.com/docs/DoubaoVoice/Tonelist-1?lang=zh",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "gemini",
+    "id": "Charon",
+    "name": "Charon",
+    "scenes": [
+      "knowledge",
+      "news",
+      "short-video"
+    ],
+    "reason": "官方特征为信息播报；可通过独立风格注解控制讲解方式。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "minimax",
+    "id": "Chinese (Mandarin)_News_Anchor",
+    "name": "新闻女声",
+    "scenes": [
+      "news"
+    ],
+    "reason": "官方名称为新闻女声；优先作为新闻/资讯候选。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://platform.minimax.cn/docs/faq/system-voice-id.md",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "minimax",
+    "id": "Chinese (Mandarin)_Reliable_Executive",
+    "name": "沉稳高管",
+    "scenes": [
+      "knowledge",
+      "news",
+      "ad"
+    ],
+    "reason": "官方名称为沉稳高管；财经或产品旁白适配需要用户试听。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://platform.minimax.cn/docs/faq/system-voice-id.md",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "volcengine",
+    "id": "zh_male_jieshuoxiaoming_uranus_bigtts",
+    "name": "解说小明 2.0",
+    "scenes": [
+      "short-video",
+      "knowledge"
+    ],
+    "reason": "官方名称为解说小明2.0；短视频用途是场景推断。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://docs.volcengine.com/docs/DoubaoVoice/Tonelist-1?lang=zh",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "volcengine",
+    "id": "zh_female_vv_uranus_bigtts",
+    "name": "Vivi 2.0",
+    "scenes": [
+      "short-video",
+      "ad",
+      "knowledge"
+    ],
+    "reason": "官方通用场景音色Vivi2.0，适合纳入女声旁白试听。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://docs.volcengine.com/docs/DoubaoVoice/Tonelist-1?lang=zh",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "minimax",
+    "id": "Chinese (Mandarin)_Gentleman",
+    "name": "温润男声",
+    "scenes": [
+      "warm",
+      "story"
+    ],
+    "reason": "官方名为温润男声；用于温和故事的候选，未做长段实测。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://platform.minimax.cn/docs/faq/system-voice-id.md",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "volcengine",
+    "id": "zh_female_wenroushunv_uranus_bigtts",
+    "name": "温柔淑女 2.0",
+    "scenes": [
+      "warm",
+      "ad",
+      "story"
+    ],
+    "reason": "官方名为温柔淑女2.0；生活内容/陪伴的搭配为推断。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://docs.volcengine.com/docs/DoubaoVoice/Tonelist-1?lang=zh",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "gemini",
+    "id": "Sulafat",
+    "name": "Sulafat",
+    "scenes": [
+      "warm",
+      "story"
+    ],
+    "reason": "官方特征为温暖；普通话效果仍需试听。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "gemini",
+    "id": "Aoede",
+    "name": "Aoede",
+    "scenes": [
+      "warm",
+      "short-video",
+      "ad"
+    ],
+    "reason": "官方特征为轻松；有一位作者的旧模型女声偏好记录，不能据此排名。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+    "community_sources": [
+      "https://x.com/gogoxui/status/1925074740097778040"
+    ],
+    "verified_at": "2026-10-10"
+  },
+  {
+    "provider": "gemini",
+    "id": "Sadaltager",
+    "name": "Sadaltager",
+    "scenes": [
+      "knowledge",
+      "story"
+    ],
+    "reason": "官方特征为博学感；知识叙事适配是推断。",
+    "basis": "官方名称/特征 + 本项目场景推断，非听感实测",
+    "official_source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+    "community_sources": [],
+    "verified_at": "2026-10-10"
+  }
+]

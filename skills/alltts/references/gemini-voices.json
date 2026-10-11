@@ -1,0 +1,275 @@
+{
+  "scope": "完整30个预置音色；扩展和自定义音色需GET /v1beta/voices实时分页查询",
+  "voices": [
+    {
+      "provider": "gemini",
+      "id": "Zephyr",
+      "name": "Zephyr",
+      "official_description": "明亮",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Puck",
+      "name": "Puck",
+      "official_description": "欢快",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Charon",
+      "name": "Charon",
+      "official_description": "信息播报",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Kore",
+      "name": "Kore",
+      "official_description": "坚定",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Fenrir",
+      "name": "Fenrir",
+      "official_description": "兴奋",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Leda",
+      "name": "Leda",
+      "official_description": "年轻感",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Orus",
+      "name": "Orus",
+      "official_description": "坚定",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Aoede",
+      "name": "Aoede",
+      "official_description": "轻松",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Callirrhoe",
+      "name": "Callirrhoe",
+      "official_description": "随和",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Autonoe",
+      "name": "Autonoe",
+      "official_description": "明亮",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Enceladus",
+      "name": "Enceladus",
+      "official_description": "气声",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Iapetus",
+      "name": "Iapetus",
+      "official_description": "清晰",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Umbriel",
+      "name": "Umbriel",
+      "official_description": "随和",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Algieba",
+      "name": "Algieba",
+      "official_description": "顺滑",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Despina",
+      "name": "Despina",
+      "official_description": "顺滑",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Erinome",
+      "name": "Erinome",
+      "official_description": "清晰",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Algenib",
+      "name": "Algenib",
+      "official_description": "沙哑",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Rasalgethi",
+      "name": "Rasalgethi",
+      "official_description": "信息播报",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Laomedeia",
+      "name": "Laomedeia",
+      "official_description": "欢快",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Achernar",
+      "name": "Achernar",
+      "official_description": "柔软",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Alnilam",
+      "name": "Alnilam",
+      "official_description": "坚定",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Schedar",
+      "name": "Schedar",
+      "official_description": "平稳",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Gacrux",
+      "name": "Gacrux",
+      "official_description": "成熟感",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Pulcherrima",
+      "name": "Pulcherrima",
+      "official_description": "直接",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Achird",
+      "name": "Achird",
+      "official_description": "友好",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Zubenelgenubi",
+      "name": "Zubenelgenubi",
+      "official_description": "休闲",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Vindemiatrix",
+      "name": "Vindemiatrix",
+      "official_description": "温柔",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Sadachbia",
+      "name": "Sadachbia",
+      "official_description": "活泼",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Sadaltager",
+      "name": "Sadaltager",
+      "official_description": "博学感",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    },
+    {
+      "provider": "gemini",
+      "id": "Sulafat",
+      "name": "Sulafat",
+      "official_description": "温暖",
+      "language": "多语种，使用前核查当前模型语言支持并试听",
+      "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
+      "verified_at": "2026-10-10"
+    }
+  ]
+}

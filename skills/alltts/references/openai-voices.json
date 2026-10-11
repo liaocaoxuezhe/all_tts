@@ -1,0 +1,218 @@
+{
+  "scope": "13个官方预置音色，不包含自定义声音；未臆测性别/特质",
+  "voices": [
+    {
+      "id": "alloy",
+      "name": "alloy",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15",
+        "tts-1",
+        "tts-1-hd"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "ash",
+      "name": "ash",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15",
+        "tts-1",
+        "tts-1-hd"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "ballad",
+      "name": "ballad",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "coral",
+      "name": "coral",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15",
+        "tts-1",
+        "tts-1-hd"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "echo",
+      "name": "echo",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15",
+        "tts-1",
+        "tts-1-hd"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "fable",
+      "name": "fable",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15",
+        "tts-1",
+        "tts-1-hd"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "nova",
+      "name": "nova",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15",
+        "tts-1",
+        "tts-1-hd"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "onyx",
+      "name": "onyx",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15",
+        "tts-1",
+        "tts-1-hd"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "sage",
+      "name": "sage",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15",
+        "tts-1",
+        "tts-1-hd"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "shimmer",
+      "name": "shimmer",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15",
+        "tts-1",
+        "tts-1-hd"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "verse",
+      "name": "verse",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "marin",
+      "name": "marin",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    },
+    {
+      "id": "cedar",
+      "name": "cedar",
+      "language": "多语种（官方说明优化英语）",
+      "model": [
+        "gpt-4o-mini-tts",
+        "gpt-4o-mini-tts-2025-12-15"
+      ],
+      "provider": "openai",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11",
+      "account_scope": "具体音色权限以账号/区域为准",
+      "runnable": true,
+      "official_description": null
+    }
+  ]
+}

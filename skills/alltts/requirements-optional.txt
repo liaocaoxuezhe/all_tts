@@ -1,0 +1,9 @@
+# Python 3.9 兼容的可选协议依赖，只供 Polly / 讯飞使用。
+boto3==1.38.46
+botocore==1.38.46
+s3transfer==0.13.0
+jmespath==1.0.1
+python-dateutil==2.9.0.post0
+six==1.17.0
+urllib3==1.26.20
+websocket-client==1.8.0

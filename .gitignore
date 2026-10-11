@@ -1,0 +1,27 @@
+# 本地凭据与环境：唯一可提交的环境文件是空配置模板
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+*service-account*.json
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.DS_Store
+.idea/
+# 文稿、生成物及本地工具均不发布
+out/
+*.mp3
+*.wav
+*.aiff
+*.aif
+.alltts-*
+test/output/
+test/tools/
+# 仅供本地研究的厂商原始网页/PDF，不分发第三方整篇文档
+test/*-official.*
+test/xfyun-readable.txt
+test/system-voices.json
