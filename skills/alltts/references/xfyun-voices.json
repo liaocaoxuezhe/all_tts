@@ -1,17 +1,1547 @@
 {
-  "scope": "只记录接口文档示例，不是全音库；其他 vcn 从账号控制台取得",
+  "schema_version": 2,
+  "verified_at": "2026-10-11",
+  "scope": "在线文档候选 + 超拟人公开全表 + 长文本附录全表；各产品的 vcn 不互相推断兼容",
+  "api_profiles_file": "api-profiles.json",
   "voices": [
     {
+      "provider": "xfyun",
       "id": "x4_xiaoyan",
       "name": "x4_xiaoyan",
-      "language": null,
-      "model": "online-tts/v2",
-      "official_description": "官方参数表中的 vcn 示例；须在控制台开通",
-      "provider": "xfyun",
       "source": "https://www.xfyun.cn/doc/tts/online_tts/API.html",
       "verified_at": "2026-10-11",
-      "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "api_profiles": [
+        "xfyun.online.v2"
+      ],
+      "model": "online-tts/v2",
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "official_description": "在线接口 vcn 参数示例，权限须在控制台确认"
+    },
+    {
+      "provider": "xfyun",
+      "id": "xiaoyan",
+      "name": "xiaoyan",
+      "source": "https://www.xfyun.cn/doc/tts/online_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.online.v2"
+      ],
+      "model": "online-tts/v2",
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "official_description": "在线接口 FAQ 提及的发音人；支持及授权须在控制台确认"
+    },
+    {
+      "provider": "xfyun",
+      "id": "xiaoyu",
+      "name": "xiaoyu",
+      "source": "https://www.xfyun.cn/doc/tts/online_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.online.v2"
+      ],
+      "model": "online-tts/v2",
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "official_description": "在线接口 FAQ 提及的发音人；支持及授权须在控制台确认"
+    },
+    {
+      "provider": "xfyun",
+      "id": "xiaofeng",
+      "name": "xiaofeng",
+      "source": "https://www.xfyun.cn/doc/tts/online_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.online.v2"
+      ],
+      "model": "online-tts/v2",
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "official_description": "在线接口 FAQ 提及的发音人；支持及授权须在控制台确认"
+    },
+    {
+      "provider": "xfyun",
+      "id": "xiaoqi",
+      "name": "xiaoqi",
+      "source": "https://www.xfyun.cn/doc/tts/online_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.online.v2"
+      ],
+      "model": "online-tts/v2",
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "official_description": "在线接口 FAQ 提及的发音人；支持及授权须在控制台确认"
+    },
+    {
+      "provider": "xfyun",
+      "id": "catherine",
+      "name": "catherine",
+      "source": "https://www.xfyun.cn/doc/tts/online_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.online.v2"
+      ],
+      "model": "online-tts/v2",
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "official_description": "在线接口 FAQ 提及的发音人；支持及授权须在控制台确认"
+    },
+    {
+      "provider": "xfyun",
+      "id": "mary",
+      "name": "mary",
+      "source": "https://www.xfyun.cn/doc/tts/online_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.online.v2"
+      ],
+      "model": "online-tts/v2",
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "official_description": "在线接口 FAQ 提及的发音人；支持及授权须在控制台确认"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_youxinanshibing_pro",
+      "name": "士兵男声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_zhuanyenvzhuchi_pro",
+      "name": "大会主持女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "大会主持",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_zuixianlibai_pro",
+      "name": "李白模仿",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "IP模仿",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_shiwangxiaoxin_pro",
+      "name": "奶凶辛巴",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "童年男",
+      "language": "中文普通话",
+      "official_description": "IP模仿",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_bokenansheng_pro",
+      "name": "播客男声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "广播电台",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_zhuanyenanzhuchi_pro",
+      "name": "大会主持男声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "大会主持",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_ranzhinvdazi_pro",
+      "name": "运动陪练女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "运动辅助",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_zhantingnanjiedai_pro",
+      "name": "展厅接待男声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "展厅接待",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_zhantingnvjiedai_pro",
+      "name": "展厅接待女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "展厅接待",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_huifangnv_pro",
+      "name": "回访女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "客服",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_wennuancixingnansheng_mini",
+      "name": "温暖磁性男声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_xiaonaigoudidi_mini",
+      "name": "小奶狗弟弟",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_shibingnvsheng_mini",
+      "name": "士兵女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_kongbunvsheng_mini",
+      "name": "恐怖女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "旁白配音_悬疑恐怖",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_yulexinwennvsheng_mini",
+      "name": "娱乐新闻女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "娱乐新闻",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_wenrounansheng_mini",
+      "name": "温柔男声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "售后客服",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_jingqudaolannvsheng_mini",
+      "name": "景区导览女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "景区导览解说",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_daqixuanchuanpiannansheng_mini",
+      "name": "大气宣传片男声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "广告宣传片",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_cuishounvsheng_pro",
+      "name": "催收女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "催收客服",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_yingxiaonv_pro",
+      "name": "营销女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "营销客服",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_huanlemianbao_pro",
+      "name": "海绵宝宝",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "童年男",
+      "language": "中文普通话",
+      "official_description": "IP模仿",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_xiangruiyingyu_pro",
+      "name": "商务殷语",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "IP模仿",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_taiqiangnuannan_pro",
+      "name": "台湾腔温柔男声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "台湾话",
+      "official_description": "台湾话",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_wumeinv_pro",
+      "name": "妩媚姐姐",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingbosong_pro",
+      "name": "聆伯松",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_dudulibao_pro",
+      "name": "少女可莉",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "童年女",
+      "language": "中文普通话",
+      "official_description": "IP模仿",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_huajidama_pro",
+      "name": "滑稽大妈",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_huoposhaonian_pro",
+      "name": "活泼少年",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingxiaoxue_pro",
+      "name": "聆小雪",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_gufengxianv_mini",
+      "name": "古风侠女",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_wuyediantai_mini",
+      "name": "午夜电台",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_tiexinnanyou_mini",
+      "name": "贴心男友",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingxiaoli_pro",
+      "name": "聆小璃",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "交互聊天",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_xiaoqiChat_pro",
+      "name": "聆小琪",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "交互聊天",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingfeiyi_pro",
+      "name": "聆飞逸",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "交互聊天",
+      "default_free": true,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_feizheChat_pro",
+      "name": "聆飞哲",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "交互聊天",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingxiaoyue_pro",
+      "name": "聆小玥",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "交互聊天",
+      "default_free": true,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingxiaoxuan_pro",
+      "name": "聆小璇",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "交互聊天",
+      "default_free": true,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingyuyan_pro",
+      "name": "聆玉言",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "交互聊天",
+      "default_free": true,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_pangbainan1_pro",
+      "name": "旁白男声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "旁白配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_pangbainv1_pro",
+      "name": "旁白女声",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "旁白配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingfeihan_pro",
+      "name": "聆飞瀚",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "纪录片",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingfeihao_pro",
+      "name": "聆飞皓",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "广告促销",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_gufengpangbai_pro",
+      "name": "古风旁白",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "旁白配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingyuaner_pro",
+      "name": "聆园儿",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "儿童绘本",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_ganliannvxing_pro",
+      "name": "干练女性",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_ruyadashu_pro",
+      "name": "儒雅大叔",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingyufei_pro",
+      "name": "聆玉菲",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "时政新闻",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingxiaoshan_pro",
+      "name": "聆小珊",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "时政新闻",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingxiaoyun_pro",
+      "name": "聆小芸",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingyouyou_pro",
+      "name": "聆佑佑",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "童年女",
+      "language": "中文普通话",
+      "official_description": "交互聊天",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingxiaoying_pro",
+      "name": "聆小颖",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "交互聊天",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingxiaozhen_pro",
+      "name": "聆小瑱",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "直播带货",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingfeibo_pro",
+      "name": "聆飞博",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "时政新闻",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_waiguodashu_pro",
+      "name": "外国大叔",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话（外国人说中文）",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_gaolengnanshen_pro",
+      "name": "高冷男神",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "中文普通话",
+      "official_description": "角色配音",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_dongmanshaonv_pro",
+      "name": "动漫少女",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "动漫角色",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x5_lingxiaotang_flow",
+      "name": "聆小糖",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "语音助手",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x5_lingyuzhao_flow",
+      "name": "聆玉昭",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": "交互聊天",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_zijin_oral",
+      "name": "子津",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "天津话",
+      "official_description": "交互聊天",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_ziyang_oral",
+      "name": "子阳",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年男",
+      "language": "东北话",
+      "official_description": "交互聊天",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x5_EnUs_Grant_flow",
+      "name": "Grant",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "英文美式口音",
+      "official_description": "交互聊天",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x5_EnUs_Lila_flow",
+      "name": "Lila",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "英文美式口音",
+      "official_description": "交互聊天",
+      "default_free": false,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x6_lingyuzhao_pro",
+      "name": "聆玉昭",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.super.v1"
+      ],
+      "model": "super-smart-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "成年女",
+      "language": "中文普通话",
+      "official_description": null,
+      "default_free": true,
+      "product": "超拟人语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_yeting",
+      "name": "希涵",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "女",
+      "language": "中文/普通话",
+      "official_description": "游戏影视解说",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_guanshan",
+      "name": "关山-专题",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "男",
+      "language": "中文/普通话",
+      "official_description": "专题片纪录片",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_pengfei",
+      "name": "小鹏",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "男",
+      "language": "中文/普通话",
+      "official_description": "新闻播报",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_qianxue",
+      "name": "千雪",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "女",
+      "language": "中文/普通话",
+      "official_description": "阅读听书",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_lingbosong",
+      "name": "聆伯松-老年男声",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "男",
+      "language": "中文/普通话",
+      "official_description": "阅读听书",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_xiuying",
+      "name": "秀英-老年女声",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "女",
+      "language": "中文/普通话",
+      "official_description": "阅读听书",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_mingge",
+      "name": "明哥",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "男",
+      "language": "中文/普通话",
+      "official_description": "阅读听书",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_doudou",
+      "name": "豆豆",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "男",
+      "language": "中文/男童",
+      "official_description": "阅读听书",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_lingxiaoshan_profnews",
+      "name": "聆小珊",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "女",
+      "language": "中文/普通话",
+      "official_description": "新闻播报",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_xiaoguo",
+      "name": "小果",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "女",
+      "language": "中文/普通话",
+      "official_description": "新闻播报",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_xiaozhong",
+      "name": "小忠",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "男",
+      "language": "中文/普通话",
+      "official_description": "新闻播报",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_yezi",
+      "name": "小露",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "女",
+      "language": "中文/普通话",
+      "official_description": "通用场景",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_chaoge",
+      "name": "超哥",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "男",
+      "language": "中文/普通话",
+      "official_description": "新闻播报",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_feidie",
+      "name": "飞碟哥",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "男",
+      "language": "中文/普通话",
+      "official_description": "游戏影视解说",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_lingfeihao_upbeatads",
+      "name": "聆飞皓-广告",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "男",
+      "language": "中文/普通话",
+      "official_description": "直播广告",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_wangqianqian",
+      "name": "嘉欣",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "女",
+      "language": "中文/普通话",
+      "official_description": "直播广告",
+      "product": "长文本语音合成"
+    },
+    {
+      "provider": "xfyun",
+      "id": "x4_lingxiaozhen_eclives",
+      "name": "聆小臻",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "xfyun.long.v1"
+      ],
+      "model": "long-text-tts",
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "gender": "女",
+      "language": "中文/普通话",
+      "official_description": "直播广告",
+      "product": "长文本语音合成"
     }
   ]
 }

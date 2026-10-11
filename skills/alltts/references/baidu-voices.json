@@ -11,7 +11,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "0",
@@ -23,7 +26,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "3",
@@ -35,7 +41,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4",
@@ -47,7 +56,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "5003",
@@ -59,7 +71,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "5118",
@@ -71,7 +86,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "106",
@@ -83,7 +101,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "110",
@@ -95,7 +116,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "111",
@@ -107,7 +131,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "103",
@@ -119,7 +146,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "5",
@@ -131,7 +161,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4003",
@@ -143,7 +176,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4106",
@@ -155,7 +191,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4115",
@@ -167,7 +206,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4119",
@@ -179,7 +221,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4105",
@@ -191,7 +236,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4117",
@@ -203,7 +251,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4100",
@@ -215,7 +266,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4103",
@@ -227,7 +281,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4144",
@@ -239,7 +296,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4278",
@@ -251,7 +311,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4143",
@@ -263,7 +326,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4140",
@@ -275,7 +341,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4129",
@@ -287,7 +356,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4149",
@@ -299,7 +371,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4254",
@@ -311,7 +386,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4206",
@@ -323,7 +401,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4226",
@@ -335,7 +416,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4189",
@@ -347,7 +431,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4194",
@@ -359,7 +446,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4193",
@@ -371,7 +461,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4195",
@@ -383,7 +476,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4196",
@@ -395,7 +491,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4197",
@@ -407,7 +506,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "20100",
@@ -419,7 +521,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "20101",
@@ -431,7 +536,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4257",
@@ -443,7 +551,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4132",
@@ -455,7 +566,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4139",
@@ -467,7 +581,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "5977",
@@ -479,7 +596,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4007",
@@ -491,7 +611,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4150",
@@ -503,7 +626,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4134",
@@ -515,7 +641,10 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     },
     {
       "id": "4172",
@@ -527,7 +656,12 @@
       "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
       "verified_at": "2026-10-11",
       "account_scope": "具体音色权限以账号/区域为准",
-      "runnable": true
+      "runnable": true,
+      "api_profiles": [
+        "baidu.short.text2audio"
+      ]
     }
-  ]
+  ],
+  "schema_version": 2,
+  "api_profiles_file": "api-profiles.json"
 }

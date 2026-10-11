@@ -1,0 +1,821 @@
+{
+  "compared_at": "2026-10-11",
+  "source_file": "20240620_Minimax 新增音色.xlsx",
+  "source_sha256": "f23f6a503779f52eb7d7ddbf4356c2a4e1062d9f0828469a9f622f16374cf2b8",
+  "source_sheet": "Sheet1",
+  "effective_ids": 71,
+  "original_official_matches": 10,
+  "original_missing": 61,
+  "skipped_rows": [
+    68
+  ],
+  "matched": [
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 23,
+      "name": "俏皮萌妹",
+      "id": "qiaopi_mengmei",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "灵动",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 27,
+      "name": "甜心小玲",
+      "id": "tianxin_xiaoling",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "清新",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 51,
+      "name": "霸道少爷",
+      "id": "badao_shaoye",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "强势",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 52,
+      "name": "嗲嗲学妹",
+      "id": "diadia_xuemei",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "娇俏",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 56,
+      "name": "俊朗男友",
+      "id": "junlang_nanyou",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "阳光",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 59,
+      "name": "淡雅学姐",
+      "id": "danya_xuejie",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "妩媚",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 61,
+      "name": "妩媚御姐",
+      "id": "wumei_yujie",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "感性",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 63,
+      "name": "纯真学弟",
+      "id": "chunzhen_xuedi",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "青涩",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 69,
+      "name": "冷淡兄长",
+      "id": "lengdan_xiongzhang",
+      "gender": "男",
+      "age_group": "中年",
+      "description": "沉稳",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 72,
+      "name": "病娇弟弟",
+      "id": "bingjiao_didi",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "傲娇",
+      "source_date": "2024-06-20"
+    }
+  ],
+  "added_as_historical": [
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 2,
+      "name": "调皮公主",
+      "id": "tiaopi_gongzhu",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "淘气",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 3,
+      "name": "活力哥哥",
+      "id": "huoli_gege",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "朝气",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 4,
+      "name": "胡同大爷",
+      "id": "hutong_daye",
+      "gender": "男",
+      "age_group": "中年",
+      "description": "诙谐",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 5,
+      "name": "呆萌青年",
+      "id": "daimeng_qingnian",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "木讷",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 6,
+      "name": "性感御姐",
+      "id": "xinggan_yujie",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "冷艳",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 7,
+      "name": "稚嫩奶狗",
+      "id": "zhinen_naigou",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "懵懂",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 8,
+      "name": "病娇姐姐",
+      "id": "bingjiao_jiejie",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "病娇",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 9,
+      "name": "诡异法师",
+      "id": "guiyi_fashi",
+      "gender": "男",
+      "age_group": "中年",
+      "description": "怪诞",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 10,
+      "name": "成熟姐姐",
+      "id": "chengshu_jiejie",
+      "gender": "女",
+      "age_group": "中年",
+      "description": "知性",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 11,
+      "name": "稚嫩学生",
+      "id": "zhinen_xuesheng",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "单纯",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 12,
+      "name": "女性帮主",
+      "id": "nv_bangzhu",
+      "gender": "女",
+      "age_group": "中年",
+      "description": "果断",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 13,
+      "name": "邻居阿姨",
+      "id": "linju_ayi",
+      "gender": "女",
+      "age_group": "中年",
+      "description": "稳重",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 14,
+      "name": "醋精男友",
+      "id": "cujing_nanyou",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "清高",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 15,
+      "name": "温柔医生",
+      "id": "wenrou_yisheng",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "随和",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 16,
+      "name": "幽默叔叔",
+      "id": "youmo_shushu",
+      "gender": "男",
+      "age_group": "中年",
+      "description": "逗趣",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 17,
+      "name": "女性上司",
+      "id": "nv_shangsi",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "严厉",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 18,
+      "name": "可爱女生",
+      "id": "keai_nvsheng",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "俏皮",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 19,
+      "name": "娇羞女友",
+      "id": "jiaoxiu_nvyou",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "甜美",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 20,
+      "name": "霸道总裁",
+      "id": "badao_zongcai",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "傲慢",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 21,
+      "name": "温柔同桌",
+      "id": "wenrou_tongzhuo",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "随和",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 22,
+      "name": "海绵宝宝",
+      "id": "dongman_baobao",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "可爱",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 24,
+      "name": "玄幻剑客",
+      "id": "xuanhuan_jianke",
+      "gender": "男",
+      "age_group": "中年",
+      "description": "神秘",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 25,
+      "name": "学霸同桌",
+      "id": "xueba_tongzhuo",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "自信",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 26,
+      "name": "假小子女",
+      "id": "jia_xiaozi",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "中性",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 28,
+      "name": "孤傲公子",
+      "id": "guao_gongzi",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "清高",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 29,
+      "name": "病娇哥哥",
+      "id": "bingjiao_gege",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "病娇",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 30,
+      "name": "魅力女友",
+      "id": "meili_nvyou",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "魅力",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 31,
+      "name": "逍遥剑仙",
+      "id": "xiaoyao_jianxian",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "悠哉",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 32,
+      "name": "知性老师",
+      "id": "zhixing_laoshi",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "温柔",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 33,
+      "name": "职场经理",
+      "id": "zhichang_jingli",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "成熟",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 34,
+      "name": "灵动女孩",
+      "id": "lingdong_nvhai",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "天真",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 35,
+      "name": "温顺弟弟",
+      "id": "wenshun_didi",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "青涩",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 36,
+      "name": "宠溺男友",
+      "id": "chongni_nanyou",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "体贴",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 37,
+      "name": "机械战甲",
+      "id": "jixie_zhanjia",
+      "gender": "男",
+      "age_group": "中年",
+      "description": "战斗",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 38,
+      "name": "琼瑶男主",
+      "id": "qiongyao_nanzhu",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "温柔",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 39,
+      "name": "搞笑大爷",
+      "id": "gaoxiao_daye",
+      "gender": "男",
+      "age_group": "中年",
+      "description": "幽默",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 40,
+      "name": "娴静学姐",
+      "id": "xianjing_xuejie",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "安静",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 41,
+      "name": "儒雅总裁",
+      "id": "ruya_zongcai",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "斯文",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 42,
+      "name": "天真女孩",
+      "id": "tianzhen_nvhai",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "单纯",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 43,
+      "name": "病弱公子",
+      "id": "bingruo_gongzi",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "病娇",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 44,
+      "name": "率真少年",
+      "id": "shuaizhen_shaonian",
+      "gender": "男",
+      "age_group": "少年",
+      "description": "真诚",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 45,
+      "name": "活泼女友",
+      "id": "huopo_nvyou",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "热情",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 46,
+      "name": "活泼女孩",
+      "id": "huopo_nvhai",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "开朗",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 47,
+      "name": "闷骚女友",
+      "id": "mensao_nvyou",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "傲娇",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 48,
+      "name": "婉约女友",
+      "id": "wanyue_nvyou",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "温柔",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 49,
+      "name": "花甲奶奶",
+      "id": "huajia_nainai",
+      "gender": "女",
+      "age_group": "老年",
+      "description": "慈祥",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 50,
+      "name": "冷峻上司",
+      "id": "badao_shangsi",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "冷漠",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 53,
+      "name": "病弱少女",
+      "id": "bingruo_shaonv",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "忧郁",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 54,
+      "name": "冷淡女王",
+      "id": "lengdan_nvwang",
+      "gender": "女",
+      "age_group": "中年",
+      "description": "高冷",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 55,
+      "name": "女性班长",
+      "id": "nv_banzhang",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "文艺",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 57,
+      "name": "暖心学姐",
+      "id": "nuanxin_xuejie",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "温柔",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 58,
+      "name": "病娇皇帝",
+      "id": "bingjiao_huangdi",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "病娇",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 60,
+      "name": "闷骚男友",
+      "id": "mensao_nanyou",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "内向",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 62,
+      "name": "贴心男友",
+      "id": "tiexin_nanyou",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "磁性",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 64,
+      "name": "傲娇男友",
+      "id": "aojiao_nanyou",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "磁性",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 65,
+      "name": "体育学弟",
+      "id": "tiyuxi_xuedi",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "花心",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 66,
+      "name": "文雅女友",
+      "id": "wenya_nvyou",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "内向",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 67,
+      "name": "甜美少女",
+      "id": "tianmei_shaonv",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "知性",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 70,
+      "name": "优柔帮主",
+      "id": "rouyou_bangzhu",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "寡断",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 71,
+      "name": "柔美女友",
+      "id": "roumei_nvyou",
+      "gender": "女",
+      "age_group": "青年",
+      "description": "娇媚",
+      "source_date": "2024-06-20"
+    },
+    {
+      "file": "20240620_Minimax 新增音色.xlsx",
+      "sheet": "Sheet1",
+      "row": 73,
+      "name": "病娇总裁",
+      "id": "bingjiao_zongcai",
+      "gender": "男",
+      "age_group": "青年",
+      "description": "病娇",
+      "source_date": "2024-06-20"
+    }
+  ],
+  "same_name_different_id": [
+    {
+      "name": "机械战甲",
+      "historical_id": "jixie_zhanjia",
+      "official_ids": [
+        "Robot_Armor"
+      ]
+    },
+    {
+      "name": "搞笑大爷",
+      "historical_id": "gaoxiao_daye",
+      "official_ids": [
+        "Chinese (Mandarin)_Humorous_Elder"
+      ]
+    },
+    {
+      "name": "花甲奶奶",
+      "historical_id": "huajia_nainai",
+      "official_ids": [
+        "Chinese (Mandarin)_Kind-hearted_Elder"
+      ]
+    }
+  ],
+  "note": "第 68 行是“星野音色id.xlsx”提示而非音色；名称相同不证明 ID 等价；原始 Excel 不改动、不分发。"
+}

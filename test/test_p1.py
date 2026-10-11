@@ -159,7 +159,8 @@ class P1Test(unittest.TestCase):
                 self.assertTrue(row['source'].startswith('https://'))
                 self.assertIn('official_description',row)
                 self.assertIn('account_scope',row)
-        for provider in ('azure','elevenlabs'):
+        self.assertTrue(client.catalog('azure'))
+        for provider in ('elevenlabs','fish','cartesia'):
             with self.assertRaises(client.TTSError): client.catalog(provider)
 
 if __name__ == '__main__': unittest.main()

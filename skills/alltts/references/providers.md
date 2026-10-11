@@ -1,5 +1,7 @@
 # 厂商优先级与接入研究
 
+2026-10-11目录扩展结果以 [voice-catalog-maintenance.md](voice-catalog-maintenance.md) 为准：当前11家静态目录共5784条，另3家使用账号分页API。音色通过 [api-profiles.json](api-profiles.json) 关联接口/版本。下文早期接入记录中的数量只代表当时范围；生成器实现范围没有随目录扩大而自动扩大。
+
 原P0/四家P1核查日期：2026-10-10；剩余7家更新：2026-10-11。优先级依据用户确认的中文短视频、口播和知识内容用途，综合中文适配、公开 API、目录可获取性与接入复杂度；不是音质实测排名，也不宣称穷尽全球供应商。P0/P1表内全部公开API厂商已交付单人文本配音客户端，P2继续暂缓。
 
 ## P0：当前实现
@@ -7,7 +9,7 @@
 | 厂商 | 接入方式与鉴权 | 音色与说明覆盖 | 客户端状态 |
 |---|---|---|---|
 | 火山/豆包语音 | POST `https://openspeech.bytedance.com/api/v3/tts/unidirectional`；X-Api-Key、X-Api-Resource-Id=`seed-tts-2.0`、X-Api-Request-Id；响应按 JSON 音频块处理 | 官方页4表共578条记录，保留场景、语种、能力、情感与产品表；294条来自2.0表。记录可跨表重复，不是578个唯一可合成音色 | MP3合成实现，公开目录实现；账号授权以控制台为准，无真实云调用 |
-| MiniMax | POST `https://api.minimax.cn/v1/t2a_v2`；Bearer Key；国际站 `https://api.minimax.io` | 系统音色文档327条全表；POST `/v1/get_voice` 查询账号音色和 description。静态名称不冒充详细描述 | MP3合成与账号查询实现，无真实云调用 |
+| MiniMax | POST `https://api.minimax.cn/v1/t2a_v2`；Bearer Key；国际站 `https://api.minimax.io` | 官方327条系统音色 + 用户历史表61条候选；后者接口/模型未核实并停用生成。POST `/v1/get_voice` 查询账号音色和description | MP3合成与账号查询实现，无真实云调用 |
 | Gemini | POST `https://generativelanguage.googleapis.com/v1beta/interactions`；x-goog-api-key；语音模型与风格注解 | 30个预置音色及中文特征释义；GET `/v1beta/voices` 分页查询扩展/自定义库和 description | 单人WAV合成与完整分页实现，无真实云调用 |
 | 系统语音 | 本机语音引擎，不用云密钥 | 动态枚举，区分macOS/Windows/Linux | macOS真实生成验证；Windows/Linux实现但尚无对应系统实测 |
 
@@ -43,7 +45,7 @@
 | `azure` | 区域实时音色列表；SSML 合成、转义文稿、速率与校验后的风格；MP3/WAV | 公有云 Speech Key+Region；10 分钟上限，长文需分段；主权云/自定义音色未接；未云端实测 |
 | `elevenlabs` | v2 账号音色完整分页，保留描述/标签/试听URL；v1 合成、MP3 | 默认 eleven_multilingual_v2；音色ID从账号查询；克隆、对话和模型专属控制未接；未云端实测 |
 
-其余7家P1已实现，见下表。目录可查询性不代表账号已获得所有音色/模型权限。Azure/ElevenLabs 必须用用户配置密钥实时查询，不以静态名单声称覆盖全部库。
+其余7家P1已实现，见下表。目录可查询性不代表账号已获得所有音色/模型权限。Azure已有全球公开快照，区域权限仍需用用户密钥实时查询；ElevenLabs使用账号目录，不以静态名单声称覆盖全部库。
 
 本轮音色来源：[Qwen-TTS 音色表](https://help.aliyun.com/zh/model-studio/qwen-tts-voice-list)、[腾讯音色表](https://cloud.tencent.com/document/product/1073/92668)、[腾讯 TextToVoice](https://cloud.tencent.com/document/api/1073/37995)、[腾讯 TC3 签名规范](https://cloud.tencent.com/document/api/306/57449)。原始目录 HTML 仅在本机 `test/` 保留，不随仓库分发；构建脚本为 `test/build_p1_catalogs.py`，使用方法见 CONTRIBUTING.md。
 
@@ -70,7 +72,7 @@
 |---|---|---|
 | `openai` | /v1/audio/speech，Bearer，MP3/WAV，速度/instructions | 13预置音色，模型适配检查；自定义声音未接 |
 | `fish` | /v1/tts，Bearer及model header，MP3/WAV | /model自有工作空间完整分页；不是全部社区音库 |
-| `xfyun` | /v2/tts HMAC-SHA256 WebSocket，MP3/raw转WAV | 官方vcn示例，实际开通范围由控制台确认；不编造列表API |
+| `xfyun` | /v2/tts HMAC-SHA256 WebSocket，MP3/raw转WAV | 7个在线文档候选、64个超拟人、17个长文本音色，分别对应专属接口；只生成在线产品 |
 | `google` | Cloud /v1/text:synthesize，OAuth，MP3/LINEAR16 WAV | /v1/voices官方目录；不等同Gemini Developer API；不接特殊Gemini-TTS模型 |
 | `polly` | 官方boto3 SigV4，MP3/PCM转WAV，关闭自动重试 | DescribeVoices完整NextToken分页，区域/engine/voice需匹配 |
 | `baidu` | OAuth token交换，text2audio双重编码，MP3/WAV | 参数表44个音库候选；小于1024 GBK字节；未接长文本及复刻 |

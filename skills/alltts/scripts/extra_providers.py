@@ -149,6 +149,9 @@ def synth_xfyun(c, args, text):
         raise c.TTSError('讯飞文稿必须少于8000 UTF-8字节，请先分段。')
     if args.model or args.style or args.speed != 1:
         raise c.TTSError('讯飞不映射 --model/--style/--speed；原生语速用 --xfyun-speed（0–100）。')
+    known = [v for v in c.catalog('xfyun') if v['id'] == args.voice]
+    if known and not any(v.get('runnable', False) and 'xfyun.online.v2' in v.get('api_profiles', []) for v in known):
+        raise c.TTSError('该讯飞音色属于超拟人或长文本产品；当前生成器仅接入在线 /v2/tts，请按目录选择对应接口。')
     speed = getattr(args, 'xfyun_speed', 50)
     if not 0 <= speed <= 100:
         raise c.TTSError('讯飞 --xfyun-speed 必须在0–100。')
@@ -249,6 +252,9 @@ def synth(c, args, text):
         engine = args.model or 'standard'
         if engine not in ('standard', 'neural', 'long-form', 'generative') or args.style or args.speed != 1:
             raise c.TTSError('Polly --model 为 engine；此客户端不映射 style/speed。')
+        known = [v for v in c.catalog('polly') if v['id'] == args.voice and (not language or v['language'] == language)]
+        if known and not any(v.get('runnable', False) and engine in v['supported_engines'] for v in known):
+            raise c.TTSError('Polly 音色与 engine 不匹配，或精确 API VoiceId 尚未核实；请查询目录并设置 --model。')
         if len(text) > 3000:
             raise c.TTSError('Polly 单次最多3000计费字符，请先分段。')
         body = {'Text': text, 'TextType': 'text', 'VoiceId': args.voice, 'Engine': engine,

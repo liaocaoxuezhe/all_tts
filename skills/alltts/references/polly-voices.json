@@ -1,0 +1,2907 @@
+{
+  "schema_version": 2,
+  "verified_at": "2026-10-11",
+  "scope": "官方全语言表按音色展开；精确 ID 与 API 枚举交叉验证；保留引擎兼容矩阵",
+  "api_profiles_file": "api-profiles.json",
+  "voices": [
+    {
+      "provider": "polly",
+      "id": "Zeina",
+      "name": "Zeina",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "arb",
+      "language_name": "Arabic",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Hala",
+      "name": "Hala",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ar-AE",
+      "language_name": "Arabic (Gulf)",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Zayd",
+      "name": "Zayd",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ar-AE",
+      "language_name": "Arabic (Gulf)",
+      "gender": "Male",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Lisa",
+      "name": "Lisa",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "nl-BE",
+      "language_name": "Dutch (Belgian)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Arlet",
+      "name": "Arlet",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ca-ES",
+      "language_name": "Catalan",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Jitka",
+      "name": "Jitka",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "cs-CZ",
+      "language_name": "Czech",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Hiujin",
+      "name": "Hiujin",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "yue-CN",
+      "language_name": "Chinese (Cantonese)",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Zhiyu",
+      "name": "Zhiyu",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "cmn-CN",
+      "language_name": "Chinese (Mandarin)",
+      "gender": "Female",
+      "supported_engines": [
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Naja",
+      "name": "Naja",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "da-DK",
+      "language_name": "Danish",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Mads",
+      "name": "Mads",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "da-DK",
+      "language_name": "Danish",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Sofie",
+      "name": "Sofie",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "da-DK",
+      "language_name": "Danish",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Laura",
+      "name": "Laura",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "nl-NL",
+      "language_name": "Dutch",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Lotte",
+      "name": "Lotte",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "nl-NL",
+      "language_name": "Dutch",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Ruben",
+      "name": "Ruben",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "nl-NL",
+      "language_name": "Dutch",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Nicole",
+      "name": "Nicole",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-AU",
+      "language_name": "English (Australian)",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Olivia",
+      "name": "Olivia",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-AU",
+      "language_name": "English (Australian)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Russell",
+      "name": "Russell",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-AU",
+      "language_name": "English (Australian)",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Amy",
+      "name": "Amy",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-GB",
+      "language_name": "English (British)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Emma",
+      "name": "Emma",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-GB",
+      "language_name": "English (British)",
+      "gender": "Female",
+      "supported_engines": [
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Brian",
+      "name": "Brian",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-GB",
+      "language_name": "English (British)",
+      "gender": "Male",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Arthur",
+      "name": "Arthur",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-GB",
+      "language_name": "English (British)",
+      "gender": "Male",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Aditi",
+      "name": "Aditi",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-IN",
+      "language_name": "English (Indian)",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Raveena",
+      "name": "Raveena",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-IN",
+      "language_name": "English (Indian)",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Kajal",
+      "name": "Kajal",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-IN",
+      "language_name": "English (Indian)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Niamh",
+      "name": "Niamh",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-IE",
+      "language_name": "English (Ireland)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Aria",
+      "name": "Aria",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-NZ",
+      "language_name": "English (New Zealand)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Jasmine",
+      "name": "Jasmine",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-SG",
+      "language_name": "English (Singaporean)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Ayanda",
+      "name": "Ayanda",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-ZA",
+      "language_name": "English (South African)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Danielle",
+      "name": "Danielle",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "long-form",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "long-form",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Gregory",
+      "name": "Gregory",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "long-form",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Male",
+      "supported_engines": [
+        "long-form",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Ivy",
+      "name": "Ivy",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Female (child)",
+      "supported_engines": [
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Joanna",
+      "name": "Joanna",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Kendra",
+      "name": "Kendra",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Female",
+      "supported_engines": [
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Kimberly",
+      "name": "Kimberly",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Female",
+      "supported_engines": [
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Salli",
+      "name": "Salli",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Joey",
+      "name": "Joey",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Male",
+      "supported_engines": [
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Justin",
+      "name": "Justin",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Male (child)",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Kevin",
+      "name": "Kevin",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Male (child)",
+      "supported_engines": [
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Matthew",
+      "name": "Matthew",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Male",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Ruth",
+      "name": "Ruth",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "long-form",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "long-form",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Stephen",
+      "name": "Stephen",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Male",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Tiffany",
+      "name": "Tiffany",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Patrick",
+      "name": "Patrick",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "long-form"
+      ],
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-US",
+      "language_name": "English (US)",
+      "gender": "Male",
+      "supported_engines": [
+        "long-form"
+      ],
+      "official_description": null,
+      "api_enum_verified": false,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": "显示名尚未出现在 API VoiceId 枚举，保留候选并停用生成"
+    },
+    {
+      "provider": "polly",
+      "id": "Geraint",
+      "name": "Geraint",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "en-GB-WLS",
+      "language_name": "English (Welsh)",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Suvi",
+      "name": "Suvi",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fi-FI",
+      "language_name": "Finnish",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Ambre",
+      "name": "Ambre",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fr-FR",
+      "language_name": "French",
+      "gender": "Female",
+      "supported_engines": [
+        "generative"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Celine",
+      "name": "Céline/Celine",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fr-FR",
+      "language_name": "French",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Florian",
+      "name": "Florian",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fr-FR",
+      "language_name": "French",
+      "gender": "Male",
+      "supported_engines": [
+        "generative"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Lea",
+      "name": "Léa",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fr-FR",
+      "language_name": "French",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Mathieu",
+      "name": "Mathieu",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fr-FR",
+      "language_name": "French",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Remi",
+      "name": "Rémi",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fr-FR",
+      "language_name": "French",
+      "gender": "Male",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Isabelle",
+      "name": "Isabelle",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fr-BE",
+      "language_name": "French (Belgian)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Chantal",
+      "name": "Chantal",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fr-CA",
+      "language_name": "French (Canadian)",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Gabrielle",
+      "name": "Gabrielle",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fr-CA",
+      "language_name": "French (Canadian)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Liam",
+      "name": "Liam",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "fr-CA",
+      "language_name": "French (Canadian)",
+      "gender": "Male",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Marlene",
+      "name": "Marlene",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "de-DE",
+      "language_name": "German",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Vicki",
+      "name": "Vicki",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "de-DE",
+      "language_name": "German",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Hans",
+      "name": "Hans",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "de-DE",
+      "language_name": "German",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Daniel",
+      "name": "Daniel",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "de-DE",
+      "language_name": "German",
+      "gender": "Male",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Lennart",
+      "name": "Lennart",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "de-DE",
+      "language_name": "German",
+      "gender": "Male",
+      "supported_engines": [
+        "generative"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Hannah",
+      "name": "Hannah",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "de-AT",
+      "language_name": "German (Austrian)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Sabrina",
+      "name": "Sabrina",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "de-CH",
+      "language_name": "German (Swiss)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Aditi",
+      "name": "Aditi",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "hi-IN",
+      "language_name": "Hindi",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Kajal",
+      "name": "Kajal",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "hi-IN",
+      "language_name": "Hindi",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Dora",
+      "name": "Dóra/Dora",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "is-IS",
+      "language_name": "Icelandic",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Karl",
+      "name": "Karl",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "is-IS",
+      "language_name": "Icelandic",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Beatrice",
+      "name": "Beatrice",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "it-IT",
+      "language_name": "Italian",
+      "gender": "Female",
+      "supported_engines": [
+        "generative"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Carla",
+      "name": "Carla",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "it-IT",
+      "language_name": "Italian",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Bianca",
+      "name": "Bianca",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "it-IT",
+      "language_name": "Italian",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Lorenzo",
+      "name": "Lorenzo",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "it-IT",
+      "language_name": "Italian",
+      "gender": "Male",
+      "supported_engines": [
+        "generative"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Giorgio",
+      "name": "Giorgio",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "it-IT",
+      "language_name": "Italian",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Adriano",
+      "name": "Adriano",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "it-IT",
+      "language_name": "Italian",
+      "gender": "Male",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Mizuki",
+      "name": "Mizuki",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ja-JP",
+      "language_name": "Japanese",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Takumi",
+      "name": "Takumi",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ja-JP",
+      "language_name": "Japanese",
+      "gender": "Male",
+      "supported_engines": [
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Kazuha",
+      "name": "Kazuha",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ja-JP",
+      "language_name": "Japanese",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Tomoko",
+      "name": "Tomoko",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ja-JP",
+      "language_name": "Japanese",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Seoyeon",
+      "name": "Seoyeon",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ko-KR",
+      "language_name": "Korean",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Jihye",
+      "name": "Jihye",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ko-KR",
+      "language_name": "Korean",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Liv",
+      "name": "Liv",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "nb-NO",
+      "language_name": "Norwegian",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Ida",
+      "name": "Ida",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "nb-NO",
+      "language_name": "Norwegian",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Ewa",
+      "name": "Ewa",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pl-PL",
+      "language_name": "Polish",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Maja",
+      "name": "Maja",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pl-PL",
+      "language_name": "Polish",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Jacek",
+      "name": "Jacek",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pl-PL",
+      "language_name": "Polish",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Jan",
+      "name": "Jan",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pl-PL",
+      "language_name": "Polish",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Ola",
+      "name": "Ola",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pl-PL",
+      "language_name": "Polish",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Camila",
+      "name": "Camila",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pt-BR",
+      "language_name": "Portuguese (Brazilian)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Vitoria",
+      "name": "Vitória/Vitoria",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pt-BR",
+      "language_name": "Portuguese (Brazilian)",
+      "gender": "Female",
+      "supported_engines": [
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Ricardo",
+      "name": "Ricardo",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pt-BR",
+      "language_name": "Portuguese (Brazilian)",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Thiago",
+      "name": "Thiago",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pt-BR",
+      "language_name": "Portuguese (Brazilian)",
+      "gender": "Male",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Ines",
+      "name": "Inês/Ines",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pt-PT",
+      "language_name": "Portuguese (European)",
+      "gender": "Female",
+      "supported_engines": [
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Cristiano",
+      "name": "Cristiano",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "pt-PT",
+      "language_name": "Portuguese (European)",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Carmen",
+      "name": "Carmen",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ro-RO",
+      "language_name": "Romanian",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Tatyana",
+      "name": "Tatyana",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ru-RU",
+      "language_name": "Russian",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Maxim",
+      "name": "Maxim",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "ru-RU",
+      "language_name": "Russian",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Conchita",
+      "name": "Conchita",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-ES",
+      "language_name": "Spanish (Spain)",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Lucia",
+      "name": "Lucia",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-ES",
+      "language_name": "Spanish (Spain)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Alba",
+      "name": "Alba",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "long-form"
+      ],
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-ES",
+      "language_name": "Spanish (Spain)",
+      "gender": "Female",
+      "supported_engines": [
+        "long-form"
+      ],
+      "official_description": null,
+      "api_enum_verified": false,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": "显示名尚未出现在 API VoiceId 枚举，保留候选并停用生成"
+    },
+    {
+      "provider": "polly",
+      "id": "Enrique",
+      "name": "Enrique",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-ES",
+      "language_name": "Spanish (Spain)",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Sergio",
+      "name": "Sergio",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-ES",
+      "language_name": "Spanish (Spain)",
+      "gender": "Male",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Raúl",
+      "name": "Raúl",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "long-form"
+      ],
+      "runnable": false,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-ES",
+      "language_name": "Spanish (Spain)",
+      "gender": "Male",
+      "supported_engines": [
+        "long-form"
+      ],
+      "official_description": null,
+      "api_enum_verified": false,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": "显示名尚未出现在 API VoiceId 枚举，保留候选并停用生成"
+    },
+    {
+      "provider": "polly",
+      "id": "Mia",
+      "name": "Mia",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-MX",
+      "language_name": "Spanish (Mexican)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Andres",
+      "name": "Andrés",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-MX",
+      "language_name": "Spanish (Mexican)",
+      "gender": "Male",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Lupe",
+      "name": "Lupe",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-US",
+      "language_name": "Spanish (US)",
+      "gender": "Female",
+      "supported_engines": [
+        "generative",
+        "neural",
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Penelope",
+      "name": "Penélope/Penelope",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-US",
+      "language_name": "Spanish (US)",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Miguel",
+      "name": "Miguel",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-US",
+      "language_name": "Spanish (US)",
+      "gender": "Male",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Pedro",
+      "name": "Pedro",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "generative",
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "es-US",
+      "language_name": "Spanish (US)",
+      "gender": "Male",
+      "supported_engines": [
+        "generative",
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Astrid",
+      "name": "Astrid",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "sv-SE",
+      "language_name": "Swedish",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Elin",
+      "name": "Elin",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "sv-SE",
+      "language_name": "Swedish",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Filiz",
+      "name": "Filiz",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "tr-TR",
+      "language_name": "Turkish",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Burcu",
+      "name": "Burcu",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "neural"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "tr-TR",
+      "language_name": "Turkish",
+      "gender": "Female",
+      "supported_engines": [
+        "neural"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    },
+    {
+      "provider": "polly",
+      "id": "Gwyneth",
+      "name": "Gwyneth",
+      "source": "https://docs.aws.amazon.com/polly/latest/dg/available-voices.html",
+      "verified_at": "2026-10-11",
+      "api_profiles": [
+        "polly.speech.v1"
+      ],
+      "model": [
+        "standard"
+      ],
+      "runnable": true,
+      "account_scope": "官方公开目录；未验证账号/区域开通权限，未云端合成实测",
+      "language": "cy-GB",
+      "language_name": "Welsh",
+      "gender": "Female",
+      "supported_engines": [
+        "standard"
+      ],
+      "official_description": null,
+      "api_enum_verified": true,
+      "api_id_source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "support_note": null
+    }
+  ]
+}

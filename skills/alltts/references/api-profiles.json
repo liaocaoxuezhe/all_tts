@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "profiles": {
+    "minimax.http.v1": {
+      "provider": "minimax",
+      "product": "Speech HTTP",
+      "endpoint": "https://api.minimax.cn/v1/t2a_v2",
+      "api_version": "v1",
+      "voice_parameter": "voice_setting.voice_id",
+      "source": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http",
+      "verified_at": "2026-10-11",
+      "note": "t2a_v2 是操作路径；speech-* 是模型版本。系统目录未逐音色声明全部模型兼容性，账号查询及实际授权优先。"
+    },
+    "minimax.archive.unresolved": {
+      "provider": "minimax",
+      "product": "2024 本地历史音色表，接口待核实",
+      "endpoint": null,
+      "api_version": null,
+      "voice_parameter": null,
+      "source": "20240620_Minimax 新增音色.xlsx",
+      "verified_at": "2026-10-11",
+      "note": "用户提供的历史表含星野提示，没有 API/模型版本信息；不推断可用于当前公开 Speech API。"
+    },
+    "aliyun.qwen.http.v1": {
+      "provider": "aliyun",
+      "product": "Qwen-TTS 非实时",
+      "endpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation",
+      "api_version": "v1",
+      "voice_parameter": "input.voice",
+      "source": "https://help.aliyun.com/zh/model-studio/qwen-tts-api",
+      "verified_at": "2026-10-11"
+    },
+    "aliyun.qwen.realtime.v1": {
+      "provider": "aliyun",
+      "product": "Qwen-TTS 实时",
+      "endpoint": "wss://dashscope.aliyuncs.com/api-ws/v1/realtime?model={model}",
+      "api_version": "v1",
+      "voice_parameter": "session.voice",
+      "source": "https://help.aliyun.com/zh/model-studio/qwen-tts-realtime",
+      "verified_at": "2026-10-11"
+    },
+    "aliyun.cosy.http.v1": {
+      "provider": "aliyun",
+      "product": "CosyVoice 非实时",
+      "endpoint": "https://{WorkspaceId}.cn-beijing.maas.aliyuncs.com/api/v1/services/audio/tts/SpeechSynthesizer",
+      "api_version": "v1",
+      "voice_parameter": "input.voice",
+      "source": "https://help.aliyun.com/zh/model-studio/cosyvoice-tts-http-api",
+      "verified_at": "2026-10-11"
+    },
+    "aliyun.cosy.websocket.v1": {
+      "provider": "aliyun",
+      "product": "CosyVoice WebSocket",
+      "endpoint": "wss://{WorkspaceId}.cn-beijing.maas.aliyuncs.com/api-ws/v1/inference",
+      "api_version": "v1",
+      "voice_parameter": "payload.parameters.voice",
+      "source": "https://help.aliyun.com/zh/model-studio/cosyvoice-websocket-api",
+      "verified_at": "2026-10-11"
+    },
+    "aliyun.qwen_audio.http.v1": {
+      "provider": "aliyun",
+      "product": "Qwen-Audio-TTS 非实时",
+      "endpoint": "https://{WorkspaceId}.cn-beijing.maas.aliyuncs.com/api/v1/services/audio/tts/SpeechSynthesizer",
+      "api_version": "v1",
+      "voice_parameter": "input.voice",
+      "source": "https://help.aliyun.com/zh/model-studio/qwen-audio-tts-http-api",
+      "verified_at": "2026-10-11"
+    },
+    "tencent.text_to_voice.2019-08-23": {
+      "provider": "tencent",
+      "product": "基础语音合成",
+      "endpoint": "https://tts.tencentcloudapi.com/",
+      "api_version": "2019-08-23",
+      "voice_parameter": "VoiceType",
+      "source": "https://cloud.tencent.com/document/api/1073/37995",
+      "verified_at": "2026-10-11",
+      "action": "TextToVoice"
+    },
+    "tencent.stream_ws": {
+      "provider": "tencent",
+      "product": "实时语音合成",
+      "endpoint": "wss://tts.cloud.tencent.com/stream_ws",
+      "api_version": null,
+      "voice_parameter": "VoiceType",
+      "source": "https://cloud.tencent.com/document/api/1073/94308",
+      "verified_at": "2026-10-11",
+      "action": "TextToStreamAudioWS",
+      "note": "专用 WebSocket 协议，没有云 API Version 参数，不能套用 2019-08-23。"
+    },
+    "tencent.long.2019-08-23": {
+      "provider": "tencent",
+      "product": "长文本语音合成",
+      "endpoint": "https://tts.tencentcloudapi.com/",
+      "api_version": "2019-08-23",
+      "voice_parameter": "VoiceType",
+      "source": "https://cloud.tencent.com/document/api/1073/57373",
+      "verified_at": "2026-10-11",
+      "action": "CreateTtsTask"
+    },
+    "xfyun.online.v2": {
+      "provider": "xfyun",
+      "product": "在线语音合成",
+      "endpoint": "wss://tts-api.xfyun.cn/v2/tts",
+      "api_version": "v2",
+      "voice_parameter": "business.vcn",
+      "source": "https://www.xfyun.cn/doc/tts/online_tts/API.html",
+      "verified_at": "2026-10-11"
+    },
+    "xfyun.super.v1": {
+      "provider": "xfyun",
+      "product": "超拟人语音合成",
+      "endpoint": "wss://cbm01.cn-huabei-1.xf-yun.com/v1/private/mcd9m97e6",
+      "api_version": "v1",
+      "voice_parameter": "parameter.tts.vcn",
+      "source": "https://www.xfyun.cn/doc/spark/super%20smart-tts.html",
+      "verified_at": "2026-10-11",
+      "note": "x6_* 是发音人代次，不是 /v6 接口；不可发送到在线 /v2/tts。"
+    },
+    "xfyun.long.v1": {
+      "provider": "xfyun",
+      "product": "长文本语音合成",
+      "endpoint": "https://api-dx.xf-yun.com/v1/private/dts_create",
+      "api_version": "v1",
+      "voice_parameter": "parameter.dts.vcn",
+      "source": "https://www.xfyun.cn/doc/tts/long_text_tts/API.html",
+      "verified_at": "2026-10-11",
+      "query_endpoint": "https://api-dx.xf-yun.com/v1/private/dts_query"
+    },
+    "azure.speech.v1": {
+      "provider": "azure",
+      "product": "Speech SSML REST",
+      "endpoint": "https://{region}.tts.speech.microsoft.com/cognitiveservices/v1",
+      "api_version": "v1",
+      "voice_parameter": "SSML voice/@name",
+      "source": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/rest-text-to-speech",
+      "verified_at": "2026-10-11",
+      "note": "公开全球目录不是当前资源区域可用目录；ShortName 和 style 仍须 --live 核对。"
+    },
+    "google.cloud.v1": {
+      "provider": "google",
+      "product": "Cloud Text-to-Speech",
+      "endpoint": "https://texttospeech.googleapis.com/v1/text:synthesize",
+      "api_version": "v1",
+      "voice_parameter": "voice.name",
+      "source": "https://docs.cloud.google.com/text-to-speech/docs/reference/rest/v1/text/synthesize",
+      "verified_at": "2026-10-11"
+    },
+    "polly.speech.v1": {
+      "provider": "polly",
+      "product": "Amazon Polly",
+      "endpoint": "https://polly.{region}.amazonaws.com/v1/speech",
+      "api_version": "v1",
+      "voice_parameter": "VoiceId",
+      "source": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html",
+      "verified_at": "2026-10-11",
+      "note": "Engine 必须属于该条 supported_engines；区域仍须 DescribeVoices 确认。"
+    },
+    "openai.speech.v1": {
+      "provider": "openai",
+      "product": "Audio Speech",
+      "endpoint": "https://api.openai.com/v1/audio/speech",
+      "api_version": "v1",
+      "voice_parameter": "voice",
+      "source": "https://developers.openai.com/api/docs/guides/text-to-speech",
+      "verified_at": "2026-10-11"
+    },
+    "baidu.short.text2audio": {
+      "provider": "baidu",
+      "product": "短文本语音合成",
+      "endpoint": "https://tsn.baidu.com/text2audio",
+      "api_version": null,
+      "voice_parameter": "per",
+      "source": "https://bce.bdstatic.com/p3m/pdf/ai-cloud-share/online/SPEECH/SPEECH.pdf",
+      "verified_at": "2026-10-11",
+      "note": "路径没有版本号；音库分类不是接口版本。"
+    },
+    "gemini.interactions.v1beta": {
+      "provider": "gemini",
+      "product": "Gemini Developer TTS",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/interactions",
+      "api_version": "v1beta",
+      "voice_parameter": "generation_config.speech_config[].voice",
+      "source": "https://ai.google.dev/api/interactions-api",
+      "verified_at": "2026-10-11",
+      "note": "语音配置字段以当前客户端和官方 Interactions 文档为准；不等同 Google Cloud TTS。"
+    },
+    "volcengine.tts.v3": {
+      "provider": "volcengine",
+      "product": "豆包 TTS 2.0 HTTP",
+      "endpoint": "https://openspeech.bytedance.com/api/v3/tts/unidirectional",
+      "api_version": "v3",
+      "voice_parameter": "req_params.speaker",
+      "source": "https://docs.volcengine.com/docs/DoubaoVoice/unidirectional-streaming-text-to-speech-http?lang=zh",
+      "verified_at": "2026-10-11",
+      "resource_id": "seed-tts-2.0"
+    },
+    "volcengine.other.unresolved": {
+      "provider": "volcengine",
+      "product": "其他产品表，资源映射待核实",
+      "endpoint": null,
+      "api_version": null,
+      "voice_parameter": null,
+      "source": "https://docs.volcengine.com/docs/DoubaoVoice/Tonelist-1?lang=zh",
+      "verified_at": "2026-10-11",
+      "note": "保留已有跨产品音色；缺少已核实的资源及接口映射，不猜测可调用版本。"
+    },
+    "elevenlabs.tts.v1": {
+      "provider": "elevenlabs",
+      "product": "Text to speech",
+      "endpoint": "https://api.elevenlabs.io/v1/text-to-speech/{voice_id}",
+      "api_version": "v1",
+      "voice_parameter": "URL voice_id",
+      "source": "https://elevenlabs.io/docs/api-reference/text-to-speech/convert",
+      "verified_at": "2026-10-11",
+      "catalog_endpoint": "https://api.elevenlabs.io/v2/voices",
+      "catalog_scope": "账号分页目录，需要用户密钥，不预置公共库全部 ID"
+    },
+    "fish.tts.v1": {
+      "provider": "fish",
+      "product": "Fish Audio TTS",
+      "endpoint": "https://api.fish.audio/v1/tts",
+      "api_version": "v1",
+      "voice_parameter": "reference_id",
+      "source": "https://docs.fish.audio/api-reference/endpoint/openapi-v1/text-to-speech",
+      "verified_at": "2026-10-11",
+      "catalog_endpoint": "https://api.fish.audio/model",
+      "catalog_scope": "当前工作空间自有模型分页，需密钥；模型版本由 model header 指定"
+    },
+    "cartesia.tts.2026-08-14": {
+      "provider": "cartesia",
+      "product": "Cartesia Bytes",
+      "endpoint": "https://api.cartesia.ai/tts/bytes",
+      "api_version": "2026-08-14",
+      "voice_parameter": "voice",
+      "source": "https://docs.cartesia.ai/api-reference/tts/bytes",
+      "verified_at": "2026-10-11",
+      "version_parameter": "Cartesia-Version",
+      "catalog_endpoint": "https://api.cartesia.ai/voices",
+      "catalog_scope": "当前账号可见音色游标分页，需要用户密钥；API 日期与 sonic-* 模型版本分开"
+    }
+  }
+}

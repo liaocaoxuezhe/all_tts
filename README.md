@@ -80,23 +80,31 @@ macOS 使用 `say` 输出 AIFF；Windows 使用 System.Speech 输出 WAV；Linux
 
 | 服务 | provider | 本客户端输出 | 音色来源 / 特点 |
 |---|---|---|---|
-| MiniMax | `minimax` | MP3 | 327 个系统音色快照；账号音色实时查询；中国/国际区域 |
+| MiniMax | `minimax` | MP3 | 327 个官方系统音色 + 61 个历史候选；账号实时查询；历史候选未核实当前接口 |
 | 火山 / 豆包 | `volcengine` | MP3 | 578 条跨产品表记录，294 条属于当前可生成的 2.0 表 |
 | Gemini Developer API | `gemini` | WAV | 30 个预置音色；扩展库分页；自然语言风格 |
-| 阿里百炼 | `aliyun` | WAV | 48 个 qwen3-tts-flash 系统音色；北京/新加坡 |
-| 腾讯云 | `tencent` | MP3 / WAV | 67 条官方目录记录；TC3 签名；短文本 |
-| Azure Speech | `azure` | MP3 / WAV | 区域音色实时查询；SSML、语速、已校验的风格 |
+| 阿里百炼 | `aliyun` | WAV | 1588 条 Qwen/CosyVoice/Qwen-Audio 目录记录；生成仅接 qwen3-tts-flash |
+| 腾讯云 | `tencent` | MP3 / WAV | 151 条实时/基础/长文本记录；生成仅接基础 TextToVoice |
+| Azure Speech | `azure` | MP3 / WAV | 761 条全球目录记录及区域实时查询；SSML；HD 部分只收录 |
 | ElevenLabs | `elevenlabs` | MP3 | 当前账号目录分页；保留描述和试听 URL |
 | OpenAI Speech | `openai` | MP3 / WAV | 13 个预置音色；按模型校验；instructions |
 | Fish Audio | `fish` | MP3 / WAV | 工作空间自有模型分页；reference_id |
-| 科大讯飞 | `xfyun` | MP3 / WAV | WebSocket；官方 vcn 候选，权限以控制台为准 |
-| Google Cloud TTS | `google` | MP3 / WAV | OAuth；实时官方音色目录；与 Gemini API 分开配置 |
-| AWS Polly | `polly` | MP3 / WAV | SDK SigV4；区域音色 / engine；可选依赖 |
+| 科大讯飞 | `xfyun` | MP3 / WAV | 88 条在线/超拟人/长文本记录；生成仅接在线 /v2/tts |
+| Google Cloud TTS | `google` | MP3 / WAV | 2032 条官方音色快照及实时目录；与 Gemini API 分开配置 |
+| AWS Polly | `polly` | MP3 / WAV | 111 条语言/音色记录及引擎矩阵；3 条 API ID 待核实；区域实时查询 |
 | 百度智能云 | `baidu` | MP3 / WAV | 44 个参数表音库候选；短文本与令牌交换 |
 | Cartesia | `cartesia` | MP3 / WAV | 账号音色分页；Sonic 3 系列 |
 | 本机语音 | `system` | AIFF / WAV | 无云端 Key；枚举本机已安装音色 |
 
 目录快照有日期和官方来源，记录数不等于唯一可用音色数。实际权限、模型兼容性及价格以厂商为准。详细接入状态见 [providers.md](skills/alltts/references/providers.md)。
+
+音色通过 `api_profiles` 关联 [接口配置](skills/alltts/references/api-profiles.json)，查询结果同时展示接口地址、版本和音色参数位置。`runnable` 只表示当前客户端已实现相应协议，不代表账号已开通。完整覆盖统计及缺口见 [目录维护记录](skills/alltts/references/voice-catalog-maintenance.md)。
+
+```bash
+python3 skills/alltts/scripts/alltts.py voices --provider xfyun --api-profile xfyun.super.v1 --limit 5
+python3 skills/alltts/scripts/alltts.py voices --provider aliyun --model cosyvoice-v2 --limit 5
+python3 skills/alltts/scripts/alltts.py voices --provider minimax --runnable-only --query 女 --limit 5
+```
 
 ### 同稿比较多个候选
 

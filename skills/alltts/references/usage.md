@@ -148,7 +148,9 @@ python3 -m venv .venv
 .venv/bin/python skills/alltts/scripts/alltts.py voices --provider cartesia --live
 ```
 
-OpenAI 记录13个预置音色和适配模型，未猜测性别/特质。百度记录短文本API参数表明确列出的44个候选，未声称穷尽全部音库。讯飞仅记录官方参数表的 `x4_xiaoyan` 示例；其他音色以控制台开通后的精确 vcn 为准，不提供虚构的全量目录API。Fish 查询工作空间自有模型（`self=true`），保留描述和样本；不是全部社区音库。Google 返回官方目录；Polly 保留区域目录中的 SupportedEngines；Cartesia 保留账号可见目录和试听地址。分页重复、缺失或窗口受限会报错，不返回假装完整的目录。
+OpenAI 记录13个预置音色和适配模型，未猜测性别/特质。百度记录短文本API参数表明确列出的44个候选，未声称穷尽全部音库。讯飞公开快照包含7个在线文档候选、64个超拟人音色、17个长文本音色；当前生成器仅实现在线 `/v2/tts`，其他两类查询返回其专属接口，生成时会拒绝混用。Fish 查询工作空间自有模型（`self=true`），保留描述和样本；不是全部社区音库。Google/Polly/Azure支持无密钥的官方公开快照查询，也保留 `--live` 账号/区域查询；Polly快照保留 `supported_engines` 并校验生成引擎。Cartesia保留账号可见目录和试听地址。分页重复、缺失或窗口受限会报错，不返回假装完整的目录。
+
+音色与接口版本通过 `api_profiles` 关联 `api-profiles.json`，CLI直接返回相关接口配置。`voices --model MODEL` 筛选模型（Polly为engine），`voices --api-profile PROFILE` 筛选协议，`--runnable-only` 限定当前客户端实现范围。百炼目录扩展至Qwen实时、CosyVoice、Qwen-Audio及官方基础音色Excel；生成仍仅接上述48个qwen3-tts-flash音色。MiniMax新增61个本地历史候选，标记 `source_kind=local_historical`、`runnable=false`；当前模型与接口未核实。完整统计、Excel核对及缺口见 [voice-catalog-maintenance.md](voice-catalog-maintenance.md)。
 
 生成示例：
 

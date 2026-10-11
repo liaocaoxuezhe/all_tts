@@ -100,9 +100,9 @@ def check_minimax(data):
 
 def catalog(provider=None):
     all_rows = []
-    if provider in ('azure', 'elevenlabs', 'fish', 'google', 'polly', 'cartesia'):
+    if provider in ('elevenlabs', 'fish', 'cartesia'):
         raise TTSError('该厂商使用账号/区域目录，请运行 voices --provider ' + provider + ' --live。')
-    for p in ('minimax', 'volcengine', 'gemini', 'aliyun', 'tencent', 'openai', 'xfyun', 'baidu'):
+    for p in ('minimax', 'volcengine', 'gemini', 'aliyun', 'tencent', 'openai', 'xfyun', 'baidu', 'azure', 'google', 'polly'):
         if provider and p != provider:
             continue
         all_rows.extend(json.loads((ROOT / 'references' / (p + '-voices.json')).read_text(encoding='utf-8'))['voices'])
@@ -334,6 +334,9 @@ def synth_cloud(args, text):
     if args.provider in ('aliyun', 'tencent', 'azure', 'elevenlabs'):
         return synth_p1(args, text)
     if args.provider == 'minimax':
+        known = [v for v in catalog('minimax') if v['id'] == args.voice]
+        if known and not any(v.get('runnable', True) for v in known):
+            raise TTSError('该 MiniMax ID 仅来自本地历史表，当前公开 API/模型映射未核实；先用账号音色列表核对。')
         if not 0.5 <= args.speed <= 2:
             raise TTSError('MiniMax 语速范围 0.5–2.0')
         if len(text) >= 10000:
@@ -494,6 +497,9 @@ def main():
     voices.add_argument('--provider', choices=PROVIDERS)
     voices.add_argument('--live', action='store_true')
     voices.add_argument('--query', default='')
+    voices.add_argument('--model', help='筛选模型或 Polly engine，不会调用合成接口')
+    voices.add_argument('--api-profile', help='筛选接口配置 ID，例如 xfyun.super.v1')
+    voices.add_argument('--runnable-only', action='store_true', help='仅显示当前生成器支持的记录，仍须确认账号权限')
     voices.add_argument('--limit', type=int, default=0, help='0 为全部')
     rec = sub.add_parser('recommend', help='按中文创作场景推荐试听候选')
     rec.add_argument('--scene', choices=('knowledge','short-video','news','story','warm','ad'), required=True)
@@ -521,7 +527,7 @@ def main():
             if args.live:
                 if not args.provider:
                     raise TTSError('--live 需要指定 --provider')
-                if args.query or args.limit:
+                if args.query or args.limit or args.model or args.api_profile or args.runnable_only:
                     raise TTSError('--live 返回完整账号响应；过滤请保存 JSON 后处理。')
                 emit(live_voices(args.provider))
             elif args.provider == 'system':
@@ -529,7 +535,17 @@ def main():
             else:
                 rows = catalog(args.provider)
                 rows = [v for v in rows if args.query.lower() in json.dumps(v,ensure_ascii=False).lower()]
-                emit({'count':len(rows), 'voices':rows[:args.limit] if args.limit > 0 else rows,
+                if args.model:
+                    rows = [v for v in rows if args.model in (v.get('model') if isinstance(v.get('model'), list) else [v.get('model')])]
+                if args.api_profile:
+                    rows = [v for v in rows if args.api_profile in v.get('api_profiles', [])]
+                if args.runnable_only:
+                    rows = [v for v in rows if v.get('runnable', True)]
+                shown = rows[:args.limit] if args.limit > 0 else rows
+                profiles = json.loads((ROOT/'references/api-profiles.json').read_text(encoding='utf-8'))['profiles']
+                used = {p for v in shown for p in v.get('api_profiles', [])}
+                emit({'count':len(rows), 'unique_ids':len({v['id'] for v in rows}), 'voices':shown,
+                      'api_profiles':{p:profiles[p] for p in sorted(used)},
                       'scope': '公开目录快照；账号目录厂商需指定 --provider 配合 --live 查询' if not args.provider else json.loads((ROOT / 'references' / (args.provider + '-voices.json')).read_text(encoding='utf-8')).get('scope', '官方公开目录快照，账号授权以控制台为准')})
         elif args.command == 'recommend':
             recommend(args)

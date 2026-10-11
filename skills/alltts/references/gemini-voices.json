@@ -8,7 +8,10 @@
       "official_description": "明亮",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -17,7 +20,10 @@
       "official_description": "欢快",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -26,7 +32,10 @@
       "official_description": "信息播报",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -35,7 +44,10 @@
       "official_description": "坚定",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -44,7 +56,10 @@
       "official_description": "兴奋",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -53,7 +68,10 @@
       "official_description": "年轻感",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -62,7 +80,10 @@
       "official_description": "坚定",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -71,7 +92,10 @@
       "official_description": "轻松",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -80,7 +104,10 @@
       "official_description": "随和",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -89,7 +116,10 @@
       "official_description": "明亮",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -98,7 +128,10 @@
       "official_description": "气声",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -107,7 +140,10 @@
       "official_description": "清晰",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -116,7 +152,10 @@
       "official_description": "随和",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -125,7 +164,10 @@
       "official_description": "顺滑",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -134,7 +176,10 @@
       "official_description": "顺滑",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -143,7 +188,10 @@
       "official_description": "清晰",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -152,7 +200,10 @@
       "official_description": "沙哑",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -161,7 +212,10 @@
       "official_description": "信息播报",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -170,7 +224,10 @@
       "official_description": "欢快",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -179,7 +236,10 @@
       "official_description": "柔软",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -188,7 +248,10 @@
       "official_description": "坚定",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -197,7 +260,10 @@
       "official_description": "平稳",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -206,7 +272,10 @@
       "official_description": "成熟感",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -215,7 +284,10 @@
       "official_description": "直接",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -224,7 +296,10 @@
       "official_description": "友好",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -233,7 +308,10 @@
       "official_description": "休闲",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -242,7 +320,10 @@
       "official_description": "温柔",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -251,7 +332,10 @@
       "official_description": "活泼",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -260,7 +344,10 @@
       "official_description": "博学感",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     },
     {
       "provider": "gemini",
@@ -269,7 +356,12 @@
       "official_description": "温暖",
       "language": "多语种，使用前核查当前模型语言支持并试听",
       "source": "https://ai.google.dev/gemini-api/docs/speech-generation#voice-options",
-      "verified_at": "2026-10-10"
+      "verified_at": "2026-10-10",
+      "api_profiles": [
+        "gemini.interactions.v1beta"
+      ]
     }
-  ]
+  ],
+  "schema_version": 2,
+  "api_profiles_file": "api-profiles.json"
 }
