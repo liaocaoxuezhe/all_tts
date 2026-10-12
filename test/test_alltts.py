@@ -49,7 +49,7 @@ class ClientTest(unittest.TestCase):
         with self.assertRaises(client.TTSError):
             client.decode_volc(iter(lines))
 
-    def _volc_lines(frames):
+    def _volc_lines(self, frames):
         return [(json.dumps(frame, ensure_ascii=False) + '\n').encode('utf-8') for frame in frames]
 
     def test_volc_terminal_success_code_keeps_full_audio(self):
