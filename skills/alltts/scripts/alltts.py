@@ -75,6 +75,68 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 # 每个请求均使用此 opener，不修改宿主应用的全局 opener。
 HTTP = urllib.request.build_opener(NoRedirect())
 
+def _plain_code(value):
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, int) and 0 <= value <= 10 ** 12:
+        return value
+    if isinstance(value, str) and re.fullmatch(r'[0-9]{1,12}', value):
+        return int(value)
+    return None
+
+def _submitted_transcript(body):
+    if isinstance(body, bytes):
+        try:
+            body = json.loads(body.decode('utf-8'))
+        except (UnicodeError, json.JSONDecodeError):
+            return ''
+    if not isinstance(body, dict):
+        return ''
+    params = body.get('req_params')
+    if isinstance(params, dict) and isinstance(params.get('text'), str):
+        return params['text']
+    text = body.get('text')
+    return text if isinstance(text, str) else ''
+
+def _safe_provider_message(message, transcript):
+    # 只保留短诊断句。密钥、用户文稿、以及引号/换行等可能夹带原文的内容一律不回显。
+    if not isinstance(message, str):
+        return ''
+    collapsed = ' '.join(message.split())
+    if not re.fullmatch(r'[\w .,:;_=\-\[\]()]{1,200}', collapsed):
+        return ''
+    folded = ' '.join(transcript.split()) if isinstance(transcript, str) else ''
+    if folded and (collapsed == folded or (len(folded) >= 4 and folded in collapsed)):
+        return ''
+    cleaned = redact(collapsed)
+    if not re.fullmatch(r'[\w .,:;_=\-\[\]()]{1,200}', cleaned):
+        return ''
+    return cleaned
+
+def _volcengine_http_detail(hostname, error, body):
+    # 新版控制台 403 常见为 {"code":45000030,"message":"requested resource not granted"}。
+    if (hostname or '').lower() != 'openspeech.bytedance.com':
+        return ''
+    try:
+        data = json.loads(error.read(8192).decode('utf-8'))
+    except (UnicodeError, json.JSONDecodeError, OSError, AttributeError, ValueError):
+        return ''
+    if not isinstance(data, dict):
+        return ''
+    header = data.get('header') if isinstance(data.get('header'), dict) else {}
+    code = _plain_code(data.get('code'))
+    if code is None:
+        code = _plain_code(header.get('code'))
+    message = data.get('message') if isinstance(data.get('message'), str) else header.get('message')
+    safe = _safe_provider_message(message, _submitted_transcript(body))
+    if safe and code is not None:
+        return '%s（code %s）' % (safe, code)
+    if safe:
+        return safe
+    if code is not None:
+        return 'code %s' % code
+    return ''
+
 def request(url, headers, body=None):
     parsed = urllib.parse.urlsplit(url)
     if parsed.scheme != 'https' or not parsed.hostname or parsed.username or parsed.password:
@@ -84,8 +146,16 @@ def request(url, headers, body=None):
     try:
         return HTTP.open(req, timeout=120)
     except urllib.error.HTTPError as e:
-        # 不打印服务商返回的原文，避免回显密钥或用户文稿。
-        raise TTSError('HTTP %s：检查密钥、账号区域、权限、模型和额度；未自动重试。' % e.code) from None
+        # 不回显服务商原文，避免带出密钥或用户文稿。火山 HTTP 403 只附加白名单内的 code 与 message。
+        detail = _volcengine_http_detail(parsed.hostname, e, body) if e.code == 403 else ''
+        try:
+            e.close()
+        except OSError:
+            pass
+        hint = '检查密钥、账号区域、权限、模型和额度；未自动重试。'
+        if detail:
+            raise TTSError('HTTP %s：%s；%s' % (e.code, detail, hint)) from None
+        raise TTSError('HTTP %s：%s' % (e.code, hint)) from None
     except (urllib.error.URLError, TimeoutError, OSError):
         raise TTSError('网络连接失败或超时；生成请求可能已计费，未自动重试。') from None
 
@@ -193,8 +263,12 @@ def live_voices(provider):
             seen.add(token)
     raise TTSError('火山当前使用公开文档全表；账号授权音色请在控制台音色库确认。未编造列表 API。')
 
+# 单向流式 HTTP/SSE 的合成结束成功码。见火山引擎文档「音频合成结束的成功状态码」。
+VOLC_STREAM_DONE = 20000000
+
 def decode_volc(response):
     # HTTP chunked 不等于 SSE；接受逐行 JSON，也接受 data: 包装。
+    # code 0 是音频块；20000000 表示合成正常结束，不能当成业务错误丢掉已收到的音频。
     chunks = []
     for raw in response:
         line = raw.decode('utf-8').strip()
@@ -206,6 +280,10 @@ def decode_volc(response):
             continue
         data = json.loads(line)
         code = data.get('code')
+        if code == VOLC_STREAM_DONE:
+            if data.get('data'):
+                chunks.append(base64.b64decode(data['data'], validate=True))
+            break
         if code != 0:
             raise TTSError('火山业务错误：%s；未保存不完整音频。' % code)
         if data.get('data'):

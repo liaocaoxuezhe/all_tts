@@ -49,6 +49,122 @@ class ClientTest(unittest.TestCase):
         with self.assertRaises(client.TTSError):
             client.decode_volc(iter(lines))
 
+    def _volc_lines(frames):
+        return [(json.dumps(frame, ensure_ascii=False) + '\n').encode('utf-8') for frame in frames]
+
+    def test_volc_terminal_success_code_keeps_full_audio(self):
+        frames = [
+            {'code': 0, 'message': '', 'data': base64.b64encode(MP3[:40]).decode()},
+            {'code': 0, 'message': '', 'data': base64.b64encode(MP3[40:]).decode()},
+            {'code': 20000000, 'message': 'ok', 'data': None},
+        ]
+        self.assertEqual(client.decode_volc(iter(self._volc_lines(frames))), MP3)
+
+    def test_volc_terminal_success_sse_frame(self):
+        audio = json.dumps({'code': 0, 'message': '', 'data': base64.b64encode(MP3).decode()}).encode()
+        done = json.dumps({'code': 20000000, 'message': 'OK', 'data': None, 'usage': {'text_words': 11}}).encode()
+        lines = [b'event: 352\n', b'data: ' + audio + b'\n', b'event: 152\n', b'data: ' + done + b'\n']
+        self.assertEqual(client.decode_volc(iter(lines)), MP3)
+
+    def test_volc_real_error_codes_still_raise_without_audio(self):
+        for code in (45000000, 45000001, 40402003, 55000000):
+            lines = self._volc_lines([
+                {'code': 0, 'data': base64.b64encode(MP3).decode(), 'message': ''},
+                {'code': code, 'message': 'speaker permission denied: get resource id: access denied', 'data': None},
+            ])
+            with self.subTest(code=code):
+                with self.assertRaises(client.TTSError) as caught:
+                    client.decode_volc(iter(lines))
+                self.assertIn(str(code), str(caught.exception))
+                self.assertNotIn('access denied', str(caught.exception))
+
+    def test_volc_generate_saves_stream_that_ends_with_success_code(self):
+        stream = b''.join(self._volc_lines([
+            {'code': 0, 'data': base64.b64encode(MP3[:50]).decode()},
+            {'code': 0, 'data': base64.b64encode(MP3[50:]).decode()},
+            {'code': 20000000, 'message': 'ok', 'data': None},
+        ]))
+        with tempfile.TemporaryDirectory(dir=str(ROOT / 'test')) as directory:
+            dest = Path(directory) / 'out.mp3'
+            with patch.dict(os.environ, {'VOLCENGINE_API_KEY': 'test-only-key'}), patch.object(client.HTTP, 'open', return_value=io.BytesIO(stream)), patch.object(client, 'emit'):
+                client.generate(self.args('volcengine', voice='zh_female_vv_uranus_bigtts', output=str(dest), text='你好，这是 ALLTTS 的豆包语音测试。'))
+            self.assertEqual(dest.read_bytes(), MP3)
+
+    def test_volc_generate_business_error_saves_nothing(self):
+        stream = b''.join(self._volc_lines([
+            {'code': 0, 'data': base64.b64encode(MP3).decode()},
+            {'code': 55000000, 'message': 'server error', 'data': None},
+        ]))
+        with tempfile.TemporaryDirectory(dir=str(ROOT / 'test')) as directory:
+            dest = Path(directory) / 'out.mp3'
+            with patch.dict(os.environ, {'VOLCENGINE_API_KEY': 'test-only-key'}), patch.object(client.HTTP, 'open', return_value=io.BytesIO(stream)):
+                with self.assertRaises(client.TTSError):
+                    client.generate(self.args('volcengine', voice='zh_female_vv_uranus_bigtts', output=str(dest)))
+            self.assertEqual(list(Path(directory).iterdir()), [])
+
+    def test_volc_http_403_surfaces_code_and_message_without_secrets(self):
+        secret = 'volc-test-key-12345'
+        transcript = '你好，这是 ALLTTS 的豆包语音测试。'
+        messages = (
+            'requested resource not granted',
+            '[resource_id=seed-tts-2.0] requested resource not granted',
+        )
+        body = {'req_params': {'text': transcript, 'speaker': 'zh_female_vv_uranus_bigtts'}}
+        for message in messages:
+            payload = json.dumps({'code': 45000030, 'message': message}).encode()
+            err = urllib.error.HTTPError('https://openspeech.bytedance.com/api/v3/tts/unidirectional', 403, 'Forbidden', {}, io.BytesIO(payload))
+            with self.subTest(message=message), patch.dict(os.environ, {'VOLCENGINE_API_KEY': secret}), patch.object(client.HTTP, 'open', side_effect=err):
+                with self.assertRaises(client.TTSError) as caught:
+                    client.request('https://openspeech.bytedance.com/api/v3/tts/unidirectional', {'X-Api-Key': secret}, body)
+            text = str(caught.exception)
+            self.assertIn(message, text)
+            self.assertIn('45000030', text)
+            self.assertIn('HTTP 403', text)
+            self.assertNotIn(secret, text)
+            self.assertNotIn(transcript, text)
+            self.assertNotIn('X-Api-Key', text)
+
+    def test_volc_http_403_redacts_secret_and_drops_transcript_echo(self):
+        secret = 'volc-test-key-12345'
+        transcript = 'private narration sample'
+        leaked = 'requested resource not granted ' + secret
+        echoed = 'requested resource not granted ' + transcript
+        for message in (leaked, echoed, transcript):
+            payload = json.dumps({'header': {'code': '45000030', 'message': message}}).encode()
+            err = urllib.error.HTTPError('https://openspeech.bytedance.com/api/v3/tts/unidirectional', 403, 'private transcript', {}, io.BytesIO(payload))
+            with self.subTest(message=message), patch.dict(os.environ, {'VOLCENGINE_API_KEY': secret}), patch.object(client.HTTP, 'open', side_effect=err):
+                with self.assertRaises(client.TTSError) as caught:
+                    client.request('https://openspeech.bytedance.com/api/v3/tts/unidirectional', {'X-Api-Key': secret}, {'req_params': {'text': transcript}})
+            text = str(caught.exception)
+            self.assertIn('45000030', text)
+            self.assertNotIn(secret, text)
+            self.assertNotIn(transcript, text)
+            self.assertNotIn('private transcript', text)
+            if message == leaked:
+                self.assertIn('requested resource not granted', text)
+                self.assertIn('[REDACTED]', text)
+
+    def test_volc_http_403_non_json_body_is_not_echoed(self):
+        raw = b'private transcript volc-test-key-12345 {"code":45000030}'
+        err = urllib.error.HTTPError('https://openspeech.bytedance.com/api/v3/tts/unidirectional', 403, 'Forbidden', {}, io.BytesIO(raw))
+        with patch.dict(os.environ, {'VOLCENGINE_API_KEY': 'volc-test-key-12345'}), patch.object(client.HTTP, 'open', side_effect=err):
+            with self.assertRaises(client.TTSError) as caught:
+                client.request('https://openspeech.bytedance.com/api/v3/tts/unidirectional', {}, {'req_params': {'text': 'private transcript'}})
+        text = str(caught.exception)
+        self.assertNotIn('private transcript', text)
+        self.assertNotIn('volc-test-key-12345', text)
+        self.assertNotIn('45000030', text)
+        self.assertIn('HTTP 403', text)
+
+    def test_non_volc_http_403_stays_generic(self):
+        payload = json.dumps({'code': 45000030, 'message': 'requested resource not granted'}).encode()
+        err = urllib.error.HTTPError('https://example.test/v1', 403, 'Forbidden', {}, io.BytesIO(payload))
+        with patch.object(client.HTTP, 'open', side_effect=err):
+            with self.assertRaises(client.TTSError) as caught:
+                client.request('https://example.test/v1', {})
+        self.assertNotIn('requested resource not granted', str(caught.exception))
+        self.assertNotIn('45000030', str(caught.exception))
+
     def test_volc_resource_and_speech_rate(self):
         with patch.dict(os.environ, {'VOLCENGINE_API_KEY':'test-only-key'}), patch.object(client, 'request', return_value=io.BytesIO(b'{"code":0,"data":"'+base64.b64encode(MP3)+b'"}\n')) as request:
             audio, model = client.synth_cloud(self.args('volcengine', voice='zh_female_vv_uranus_bigtts', speed=1.2), '中文')
