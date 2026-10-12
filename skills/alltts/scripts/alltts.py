@@ -95,6 +95,9 @@ def _submitted_transcript(body):
     params = body.get('req_params')
     if isinstance(params, dict) and isinstance(params.get('text'), str):
         return params['text']
+    entered = body.get('input')
+    if isinstance(entered, dict) and isinstance(entered.get('text'), str):
+        return entered['text']
     text = body.get('text')
     return text if isinstance(text, str) else ''
 
@@ -112,6 +115,113 @@ def _safe_provider_message(message, transcript):
     if not re.fullmatch(r'[\w .,:;_=\-\[\]()]{1,200}', cleaned):
         return ''
     return cleaned
+
+def _status_token(value):
+    if isinstance(value, str) and re.fullmatch(r'[\w.-]{1,80}', value):
+        return value
+    number = _plain_code(value)
+    return str(number) if number is not None else ''
+
+def _join_status(code, message, transcript, banned=()):
+    token = _status_token(code)
+    safe = _safe_provider_message(message, transcript)
+    for secret in banned:
+        if isinstance(secret, str) and len(secret) >= 8 and (secret in token or secret in safe):
+            if secret in token:
+                token = ''
+            safe = ''
+    return '；'.join(part for part in (token, safe) if part)
+
+def _read_http_error(error):
+    try:
+        return error.read(8192)
+    except (OSError, AttributeError, ValueError):
+        return b''
+
+def _dashscope_http_detail(error, body):
+    # 百炼 HTTP 错误体为 {"code","message","request_id"}。request_id 与密钥都不回显。
+    try:
+        data = json.loads(_read_http_error(error).decode('utf-8'))
+    except (UnicodeError, json.JSONDecodeError, ValueError):
+        return ''
+    if not isinstance(data, dict):
+        return ''
+    source = data.get('error') if isinstance(data.get('error'), dict) else data
+    message = source.get('message') if isinstance(source.get('message'), str) else ''
+    return _join_status(source.get('code'), message, _submitted_transcript(body))
+
+def _is_aliyun_oss_url(url):
+    parsed = urllib.parse.urlsplit(url)
+    host = (parsed.hostname or '').lower().rstrip('.')
+    if parsed.scheme not in ('http', 'https') or parsed.username or parsed.password or parsed.fragment:
+        return False
+    if parsed.scheme == 'https' and parsed.port not in (None, 443):
+        return False
+    if parsed.scheme == 'http' and parsed.port not in (None, 80):
+        return False
+    # 只允许 *.aliyuncs.com，拒绝裸域名、用户凭据和非默认端口。
+    return host.endswith('.aliyuncs.com')
+
+def _signed_query_secrets(url):
+    names = {'ossaccesskeyid', 'signature', 'security-token', 'x-oss-signature', 'x-oss-credential', 'x-oss-security-token'}
+    found = []
+    for part in urllib.parse.urlsplit(url).query.split('&'):
+        if '=' not in part:
+            continue
+        name, value = part.split('=', 1)
+        if urllib.parse.unquote_plus(name).lower() not in names or len(value) < 8:
+            continue
+        found.extend((value, urllib.parse.unquote(value), urllib.parse.unquote_plus(value)))
+    return found
+
+def _oss_xml_status(raw, transcript, banned):
+    try:
+        root = ET.fromstring(raw)
+    except ET.ParseError:
+        return ''
+    if root.tag.split('}')[-1] != 'Error':
+        return ''
+    code = message = ''
+    for child in list(root):
+        tag = child.tag.split('}')[-1]
+        if tag == 'Code':
+            code = child.text or ''
+        elif tag == 'Message':
+            message = child.text or ''
+    return _join_status(code, message, transcript, banned)
+
+def download_aliyun_audio(url, transcript=''):
+    # 签名 URL 必须原样 GET。改成 https 或附带 Content-Type 都会让 OSS 签名校验返回 403。
+    if not _is_aliyun_oss_url(url):
+        raise TTSError('百炼 API 返回的音频地址不是官方 OSS 地址（仅允许 *.aliyuncs.com）。')
+    req = urllib.request.Request(url, method='GET')
+    try:
+        with HTTP.open(req, timeout=120) as response:
+            return response.read()
+    except TTSError:
+        raise TTSError('百炼音频下载失败：拒绝重定向，未保存音频，未自动重试。') from None
+    except urllib.error.HTTPError as e:
+        raw = _read_http_error(e)
+        try:
+            e.close()
+        except OSError:
+            pass
+        banned = _signed_query_secrets(url)
+        detail = ''
+        try:
+            data = json.loads(raw.decode('utf-8'))
+        except (UnicodeError, json.JSONDecodeError, ValueError):
+            data = None
+        if isinstance(data, dict):
+            source = data.get('error') if isinstance(data.get('error'), dict) else data
+            message = source.get('message') if isinstance(source.get('message'), str) else ''
+            detail = _join_status(source.get('code'), message, transcript, banned)
+        if not detail:
+            detail = _oss_xml_status(raw, transcript, banned)
+        suffix = ('；' + detail) if detail else ''
+        raise TTSError('百炼音频下载失败：HTTP %s%s；未保存音频，未自动重试。' % (e.code, suffix)) from None
+    except (urllib.error.URLError, TimeoutError, OSError):
+        raise TTSError('百炼音频下载失败：网络连接失败或超时；生成请求可能已计费，未保存音频，未自动重试。') from None
 
 def _volcengine_http_detail(hostname, error, body):
     # 新版控制台 403 常见为 {"code":45000030,"message":"requested resource not granted"}。
@@ -146,8 +256,14 @@ def request(url, headers, body=None):
     try:
         return HTTP.open(req, timeout=120)
     except urllib.error.HTTPError as e:
-        # 不回显服务商原文，避免带出密钥或用户文稿。火山 HTTP 403 只附加白名单内的 code 与 message。
-        detail = _volcengine_http_detail(parsed.hostname, e, body) if e.code == 403 else ''
+        # 不回显服务商原文，避免带出密钥或用户文稿。只附加白名单内的 code 与 message。
+        host = (parsed.hostname or '').lower()
+        if host in ('dashscope.aliyuncs.com', 'dashscope-intl.aliyuncs.com'):
+            detail = _dashscope_http_detail(e, body)
+        elif e.code == 403:
+            detail = _volcengine_http_detail(host, e, body)
+        else:
+            detail = ''
         try:
             e.close()
         except OSError:
@@ -329,20 +445,21 @@ def synth_p1(args, text):
         if language not in ('Auto', 'Chinese', 'English', 'German', 'Italian', 'Portuguese', 'Spanish', 'Japanese', 'Korean', 'French', 'Russian'):
             raise TTSError('百炼 --language 应为官方 language_type，例如 Auto/Chinese/English。')
         body = {'model': model, 'input': {'text': text, 'voice': args.voice, 'language_type': language}}
-        data = load_json('https://' + hosts[region] + '/api/v1/services/aigc/multimodal-generation/generation', {'Authorization': 'Bearer ' + key('DASHSCOPE_API_KEY')}, body)
+        api = 'https://' + hosts[region] + '/api/v1/services/aigc/multimodal-generation/generation'
+        try:
+            data = load_json(api, {'Authorization': 'Bearer ' + key('DASHSCOPE_API_KEY')}, body)
+        except TTSError as err:
+            raise TTSError('百炼 API 请求失败：%s' % err) from None
         if data.get('code') or data.get('status_code', 200) != 200:
-            raise TTSError('百炼业务错误；检查模型、区域、权限和额度，未自动重试。')
+            detail = _join_status(data.get('code'), data.get('message') if isinstance(data.get('message'), str) else '', text)
+            suffix = ('：' + detail) if detail else ''
+            raise TTSError('百炼 API 业务错误%s；检查模型、区域、权限和额度，未自动重试。' % suffix)
         audio = (data.get('output') or {}).get('audio') or {}
-        # data 可能是裸 PCM，优先下载官方返回的完整 WAV，不能直接冒充 WAV。
+        # data 可能是裸 PCM，只下载官方返回的完整 WAV，不能直接冒充 WAV。
         url = audio.get('url')
-        if not url:
-            raise TTSError('百炼未返回完整音频 URL；未保存可能为裸 PCM 的 data。')
-        parsed = urllib.parse.urlsplit(url)
-        if parsed.scheme not in ('http', 'https') or not (parsed.hostname or '').endswith('.aliyuncs.com') or parsed.username or parsed.password:
-            raise TTSError('百炼音频下载 URL 不是官方 OSS 地址。')
-        url = urllib.parse.urlunsplit(('https', parsed.netloc, parsed.path, parsed.query, ''))
-        with request(url, {}) as response:
-            return response.read(), model
+        if not isinstance(url, str) or not url:
+            raise TTSError('百炼 API 未返回完整音频 URL；未保存可能为裸 PCM 的 data。')
+        return download_aliyun_audio(url, text), model
     if args.provider == 'tencent':
         if args.model or args.style or args.speed != 1:
             raise TTSError('腾讯云不映射 --model/--style/--speed；语速请用 --tencent-speed（原生范围 -2–6，默认 0）。')

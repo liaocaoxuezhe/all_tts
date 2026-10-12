@@ -51,9 +51,11 @@ class P1Test(unittest.TestCase):
 
     def test_aliyun_region_body_and_wav_download(self):
         calls = []
+        signed = 'http://result.oss-cn-beijing.aliyuncs.com/a.wav?Signature=test'
         def open_request(req, timeout):
             calls.append(req)
-            if len(calls) == 1: return io.BytesIO(json.dumps({'output': {'audio': {'url': 'http://result.oss-cn-beijing.aliyuncs.com/a.wav?Signature=test', 'data': 'raw-pcm'}}}).encode())
+            self.assertEqual(timeout, 120)
+            if len(calls) == 1: return io.BytesIO(json.dumps({'output': {'audio': {'url': signed, 'data': 'raw-pcm'}}}).encode())
             return io.BytesIO(WAV)
         with patch.dict(os.environ, {'DASHSCOPE_API_KEY': 'test-key', 'DASHSCOPE_REGION': 'intl'}), patch.object(client.HTTP, 'open', open_request):
             audio, model = client.synth_cloud(self.args('aliyun', voice='Cherry', format='wav', language='Chinese'), '你好')
@@ -61,8 +63,112 @@ class P1Test(unittest.TestCase):
         self.assertEqual(model, 'qwen3-tts-flash')
         self.assertIn('dashscope-intl.aliyuncs.com', calls[0].full_url)
         self.assertEqual(json.loads(calls[0].data)['input'], {'text':'你好', 'voice':'Cherry', 'language_type':'Chinese'})
-        self.assertTrue(calls[1].full_url.startswith('https://'))
+        self.assertEqual(calls[1].full_url, signed)
+        self.assertEqual(calls[1].get_method(), 'GET')
+        self.assertIsNone(calls[1].data)
         self.assertIsNone(calls[1].get_header('Authorization'))
+        self.assertIsNone(calls[1].get_header('Content-type'))
+
+    def test_aliyun_keeps_signed_oss_url_and_saves_wav(self):
+        signed = 'http://dashscope-result-bj.oss-cn-beijing.aliyuncs.com/path/a.wav?Expires=1893456000&OSSAccessKeyId=LTAI_SECRET_KEY&Signature=abc%2Bdef%2Fghi%3D'
+        calls = []
+        def open_request(req, timeout):
+            calls.append(req)
+            self.assertEqual(timeout, 120)
+            if len(calls) == 1:
+                return io.BytesIO(json.dumps({'output': {'audio': {'url': signed, 'data': 'raw-pcm'}}}).encode())
+            return io.BytesIO(WAV)
+        with tempfile.TemporaryDirectory(dir=str(ROOT / 'test')) as directory:
+            dest = Path(directory) / 'out.wav'
+            with patch.dict(os.environ, {'DASHSCOPE_API_KEY': 'test-key', 'DASHSCOPE_REGION': 'cn'}), patch.object(client.HTTP, 'open', open_request), patch.object(client, 'emit'):
+                client.generate(self.args('aliyun', voice='Cherry', format='wav', output=str(dest), text='你好，百炼测试。'))
+            self.assertEqual(dest.read_bytes(), WAV)
+        self.assertEqual(calls[0].full_url, 'https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation')
+        self.assertEqual(calls[1].full_url, signed)
+        self.assertEqual(calls[1].get_method(), 'GET')
+        self.assertIsNone(calls[1].get_header('Content-type'))
+        self.assertIsNone(calls[1].get_header('Authorization'))
+        self.assertNotIn('LTAI_SECRET_KEY', calls[0].data.decode('utf-8'))
+
+    def test_aliyun_rejects_non_oss_url_before_download(self):
+        def open_request(req, timeout):
+            return io.BytesIO(json.dumps({'output': {'audio': {'url': 'http://evil.example/a.wav?Signature=test'}}}).encode())
+        with patch.dict(os.environ, {'DASHSCOPE_API_KEY': 'test-key', 'DASHSCOPE_REGION': 'cn'}), patch.object(client.HTTP, 'open', side_effect=open_request) as call:
+            with self.assertRaises(client.TTSError) as caught:
+                client.synth_cloud(self.args('aliyun', voice='Cherry', format='wav'), '中文')
+        self.assertEqual(call.call_count, 1)
+        self.assertIn('OSS', str(caught.exception))
+        self.assertNotIn('evil.example', str(caught.exception))
+
+    def test_aliyun_api_error_names_step_and_hides_secrets(self):
+        secret = 'dashscope-test-key'
+        transcript = 'private narration sample'
+        payload = json.dumps({'code': 'AccessDenied', 'message': 'Access denied. ' + secret, 'request_id': 'req-private-id'}).encode()
+        err = urllib.error.HTTPError('https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation', 403, 'Forbidden', {}, io.BytesIO(payload))
+        with patch.dict(os.environ, {'DASHSCOPE_API_KEY': secret, 'DASHSCOPE_REGION': 'cn'}), patch.object(client.HTTP, 'open', side_effect=err):
+            with self.assertRaises(client.TTSError) as caught:
+                client.synth_cloud(self.args('aliyun', voice='Cherry', format='wav'), transcript)
+        text = str(caught.exception)
+        self.assertIn('百炼 API 请求失败', text)
+        self.assertIn('HTTP 403', text)
+        self.assertIn('AccessDenied', text)
+        self.assertIn('Access denied.', text)
+        self.assertIn('[REDACTED]', text)
+        self.assertNotIn(secret, text)
+        self.assertNotIn(transcript, text)
+        self.assertNotIn('req-private-id', text)
+        self.assertNotIn('下载', text)
+
+    def test_aliyun_api_business_error_includes_message(self):
+        response = {'code': 'InvalidApiKey', 'message': 'Invalid API-key provided.', 'request_id': 'req-private-id'}
+        with patch.dict(os.environ, {'DASHSCOPE_API_KEY': 'test-key', 'DASHSCOPE_REGION': 'cn'}), patch.object(client, 'load_json', return_value=response):
+            with self.assertRaises(client.TTSError) as caught:
+                client.synth_cloud(self.args('aliyun', voice='Cherry', format='wav'), 'private narration sample')
+        text = str(caught.exception)
+        self.assertIn('百炼 API 业务错误', text)
+        self.assertIn('InvalidApiKey', text)
+        self.assertIn('Invalid API-key provided.', text)
+        self.assertNotIn('req-private-id', text)
+        self.assertNotIn('private narration sample', text)
+
+    def test_aliyun_download_error_names_step_and_hides_signature(self):
+        signed = 'http://dashscope-result-bj.oss-cn-beijing.aliyuncs.com/a.wav?Expires=1893456000&OSSAccessKeyId=LTAI_SECRET_KEY&Signature=abc%2Bdef%2Fghi%3D'
+        xml = b'''<?xml version="1.0" encoding="UTF-8"?>
+<Error>
+  <Code>SignatureDoesNotMatch</Code>
+  <Message>The request signature we calculated does not match the signature you provided.</Message>
+  <OSSAccessKeyId>LTAI_SECRET_KEY</OSSAccessKeyId>
+  <SignatureProvided>abc+def/ghi=</SignatureProvided>
+  <StringToSign>GET\n\n\n1893456000\n/a.wav</StringToSign>
+</Error>'''
+        api = io.BytesIO(json.dumps({'output': {'audio': {'url': signed}}}).encode())
+        download = urllib.error.HTTPError(signed, 403, 'Forbidden', {}, io.BytesIO(xml))
+        with patch.dict(os.environ, {'DASHSCOPE_API_KEY': 'test-key', 'DASHSCOPE_REGION': 'cn'}), patch.object(client.HTTP, 'open', side_effect=[api, download]):
+            with self.assertRaises(client.TTSError) as caught:
+                client.synth_cloud(self.args('aliyun', voice='Cherry', format='wav'), 'private narration sample')
+        text = str(caught.exception)
+        self.assertIn('百炼音频下载失败', text)
+        self.assertIn('HTTP 403', text)
+        self.assertIn('SignatureDoesNotMatch', text)
+        self.assertIn('does not match the signature you provided', text)
+        self.assertNotIn('LTAI_SECRET_KEY', text)
+        self.assertNotIn('abc+def/ghi=', text)
+        self.assertNotIn('abc%2Bdef', text)
+        self.assertNotIn('StringToSign', text)
+        self.assertNotIn('private narration sample', text)
+        self.assertNotIn('百炼 API 请求失败', text)
+
+    def test_aliyun_download_timeout_and_redirect_do_not_retry(self):
+        signed = 'http://dashscope-result-bj.oss-cn-beijing.aliyuncs.com/a.wav?OSSAccessKeyId=LTAI_SECRET_KEY&Signature=abcdefgh'
+        for failure in (TimeoutError('timed out'), client.TTSError('拒绝 HTTP 重定向，避免凭据传到其他地址；未自动重试。')):
+            api = io.BytesIO(json.dumps({'output': {'audio': {'url': signed}}}).encode())
+            with self.subTest(failure=type(failure).__name__), patch.dict(os.environ, {'DASHSCOPE_API_KEY': 'test-key', 'DASHSCOPE_REGION': 'cn'}), patch.object(client.HTTP, 'open', side_effect=[api, failure]) as call:
+                with self.assertRaises(client.TTSError) as caught:
+                    client.synth_cloud(self.args('aliyun', voice='Cherry', format='wav'), '中文')
+            self.assertEqual(call.call_count, 2)
+            self.assertIn('百炼音频下载失败', str(caught.exception))
+            self.assertNotIn(signed, str(caught.exception))
+            self.assertNotIn('LTAI_SECRET_KEY', str(caught.exception))
 
     def test_aliyun_errors_and_no_pcm_disguised_as_wav(self):
         responses = [{'code':'InvalidApiKey'}, {'output':{'audio':{'data':base64.b64encode(b'raw pcm').decode()}}}, {'output':{'audio':{'url':'https://example.test/a.wav'}}}]
